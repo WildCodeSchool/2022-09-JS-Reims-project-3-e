@@ -2,28 +2,25 @@ import "./NavBar.css";
 
 function NavBar() {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <ul className="list">
         <li>
           <button className="button" type="button">
-            {" "}
-            Home{" "}
+            Home
           </button>
         </li>
         <li>
           <button className="button" type="button">
-            {" "}
-            Menu{" "}
+            Menu
           </button>
         </li>
         <li>
           <button className="button" type="button">
-            {" "}
             Profil
           </button>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }
 
