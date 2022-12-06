@@ -1,12 +1,10 @@
-import Home from "./pages/Home";
-
 import "./App.css";
+import FilActu from "./components/FilActu";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <FilActu />
     </div>
   );
 }
