@@ -1,6 +1,6 @@
 function NewsFeed() {
   return (
-    <div>
+    <p>
       <h1>CHSCT</h1>
       <h3>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -43,7 +43,7 @@ function NewsFeed() {
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur
       </h3>
-    </div>
+    </p>
   );
 }
 
