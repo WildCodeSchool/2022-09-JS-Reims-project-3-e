@@ -21,9 +21,10 @@
   justify-content: center;
 }
 .button {
-  background-color: white;
   border-radius: 9px;
+  border: none;
   box-shadow: none;
+  background-color: #ebf2fb;
 }
 .imagenavbar {
   max-width: 3rem;
