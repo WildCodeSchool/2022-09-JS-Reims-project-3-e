@@ -1,4 +1,4 @@
-function FilActu() {
+function NewsFeed() {
   return (
     <div>
       <h1>CHSCT</h1>
@@ -47,4 +47,4 @@ function FilActu() {
   );
 }
 
-export default FilActu;
+export default NewsFeed;

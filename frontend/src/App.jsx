@@ -1,11 +1,10 @@
 import "./App.css";
-import FilActu from "./components/FilActu";
+import NewsFeed from "./components/NewsFeed";
 
 function App() {
   return (
     <div className="App">
-
-      <FilActu />
+      <NewsFeed />
     </div>
   );
 }
