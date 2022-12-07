@@ -10,8 +10,6 @@ router.put("/items/:id", itemControllers.edit);
 router.post("/items", itemControllers.add);
 router.delete("/items/:id", itemControllers.destroy);
 
-module.exports = router;
-
 const comments = [
   { date: "Date 1", content: "Lorem ipsum 1" },
   { date: "Date 2", content: "Lorem ipsum 2" },
@@ -19,6 +17,15 @@ const comments = [
 
 router.get("/comments", (req, res) => {
   res.json(comments);
+
+const articles = [
+  { title: "Lorem ipsum 1", content: "Lorem ipsum 1" },
+  { title: "Lorem ipsum 2", content: "Lorem ipsum 2" },
+];
+
+router.get("/articles", (req, res) => {
+  res.json(articles);
+
 });
 
 module.exports = router;
