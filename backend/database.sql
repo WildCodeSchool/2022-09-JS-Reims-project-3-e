@@ -5,12 +5,15 @@ CREATE TABLE item (
 
 INSERT INTO item (title) VALUES ('Stuff'), ('Doodads');
 
-create table article (
+CREATE TABLE article (
   id int(11) unsigned primary key not null auto_increment,
   title varchar(100) not null,
   content varchar(280) NOT NULL
 ) engine=InnoDB default charset=latin1;
 
-insert into article (title, content) VALUES
-  ('Lorem ipsum 1', 'Lorem content 1'),
-  ('Lorem ipsum 2', 'Lorem content 2');
+INSERT INTO article (title, content) VALUES
+  ('Titre Article', 
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vel, perspiciatis tempore quae vitae animi doloremque perferendis dolore, expedita alias necessitatibus sequi accusantium facere quasi eius natus? Expedita, nemo animi');
+
+  ('Titre Article', 
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vel, perspiciatis tempore quae vitae animi doloremque perferendis dolore, expedita alias necessitatibus sequi accusantium facere quasi eius natus? Expedita, nemo animi');
