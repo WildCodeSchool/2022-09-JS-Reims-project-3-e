@@ -12,6 +12,8 @@ export default function Home() {
       .then((data) => setArticles(data));
   }, []);
 
+  console.warn(articles);
+
   return (
     <>
       <header className="App-header">
@@ -27,12 +29,11 @@ export default function Home() {
           omnis voluptate.
         </article>
         <article>
-          <h1>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
-            laboriosam quod corrupti fuga hic! Harum ducimus quas odio esse.
-            Eligendi numquam suscipit laborum atque ad itaque libero reiciendis
-            omnis voluptate.
-          </h1>
+          <h1>Title</h1>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+          laboriosam quod corrupti fuga hic! Harum ducimus quas odio esse.
+          Eligendi numquam suscipit laborum atque ad itaque libero reiciendis
+          omnis voluptate.
         </article>
       </main>
 
