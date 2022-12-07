@@ -1,12 +1,14 @@
+import "../components/NavBar.css";
+import NewsFeed from "../components/NewsFeed";
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 
-export default function Home() {
+function Home() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     fetch(
-      `${import.meta.env.VITE_BACKEND_URL ?? "http://localhost/5000"}/articles`
+      `${import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000"}/comments`
     )
       .then((response) => response.json())
       .then((data) => setArticles(data));
@@ -40,4 +42,6 @@ export default function Home() {
       <footer>Ici le Footer</footer>
     </>
   );
+  return <NewsFeed />;
 }
+export default Home;
