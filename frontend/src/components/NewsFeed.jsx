@@ -2,8 +2,12 @@ import "./NewsFeed.css";
 
 function NewsFeed() {
   return (
-    <>
-      <section>
+    <section>
+      <article>
+        <div>
+          <img src="" alt="Avatar Profil" />
+          <p>Name of User</p>
+        </div>
         <h1>CHSCT</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -14,8 +18,12 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-      </section>
-      <section>
+      </article>
+      <article>
+        <div>
+          <img src="" alt="Avatar Profil" />
+          <p>Name of User</p>
+        </div>
         <h1>CHSCT</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,8 +34,16 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-      </section>
-      <section>
+        <ul>
+          <li>Like</li>
+          <li>Share</li>
+        </ul>
+      </article>
+      <article>
+        <div>
+          <img src="" alt="Avatar Profil" />
+          <p>Name of User</p>
+        </div>
         <h1>CHSCT</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,8 +54,8 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-      </section>
-    </>
+      </article>
+    </section>
   );
 }
 
