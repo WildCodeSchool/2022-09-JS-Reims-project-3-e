@@ -13,6 +13,11 @@ function NewsFeed() {
           />
           <p>Simon B</p>
         </div>
+        <img
+          className="imagecontent"
+          src="https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2018/12/10/node_20755/530170/public/2018/12/10/B9717886568Z.1_20181210094232_000%2BGERCIOLFT.1-0.jpg?itok=t6jVgxVZ1544431361"
+          alt="imagecontent"
+        />
         <h1>CHSCT</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -34,6 +39,11 @@ function NewsFeed() {
           />
           <p>Olivier N</p>
         </div>
+        <img
+          className="imagecontent"
+          src="https://www.enedis.fr/sites/default/files/styles/image_full/public/images/2022-01/enedis-notre-histoire.jpg?itok=0cK77Jh0"
+          alt="imagecontent"
+        />
         <h1>CHSCT</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -55,6 +65,11 @@ function NewsFeed() {
           />
           <p>Farid H</p>
         </div>
+        <img
+          className="imagecontent"
+          src="https://www.creads.com/wp-content/uploads/2021/05/nouveau-logo-erdf-enedis-1024x682-1.jpg"
+          alt="imagecontent"
+        />
         <h1>CHSCT</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -76,6 +91,11 @@ function NewsFeed() {
           />
           <p>Adnan B</p>
         </div>
+        <img
+          className="imagecontent"
+          src="https://media.lesechos.com/api/v1/images/view/5d96cae73e454674b96053c5/1280x720/0601987664512-web-tete.jpg"
+          alt="imagecontent"
+        />
         <h1>CHSCT</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -97,6 +117,11 @@ function NewsFeed() {
           />
           <p>Pierre-Yves G</p>
         </div>
+        <img
+          className="imagecontent"
+          src="https://t4.ftcdn.net/jpg/03/72/67/23/360_F_372672331_idaVL5JtVPgfeUOEJkdrXBe8qgV3rOaQ.jpg"
+          alt="imagecontent"
+        />
         <h1>CHSCT</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

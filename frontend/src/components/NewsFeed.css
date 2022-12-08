@@ -5,9 +5,8 @@
   overflow-y: scroll;
   height: 92vh;
   scrollbar-width: none;
-  padding: 0rem 1.5rem 0rem 1.5rem;
+  padding: 2rem 1.5rem 0rem 1.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 1.5rem;
 }
 .content::-webkit-scrollbar {
   display: none;
