@@ -1,7 +1,6 @@
 import "../components/NavBar.css";
 import { useEffect, useState } from "react";
 import NewsFeed from "../components/NewsFeed";
-import NavBar from "../components/NavBar";
 
 function Home() {
   const [articles, setArticles] = useState([]);
@@ -16,11 +15,6 @@ function Home() {
 
   console.warn(articles);
 
-  return (
-    <>
-      <NewsFeed />
-      <NavBar />
-    </>
-  );
+  return <NewsFeed />;
 }
 export default Home;
