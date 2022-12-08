@@ -13,7 +13,7 @@
   display: flex;
   list-style-type: none;
   min-width: 100vw;
-  min-height: 9vh;
+  min-height: 8vh;
   background-color: #ebf2fb;
   justify-content: space-around;
   margin: 0;
@@ -29,5 +29,5 @@
   background-color: #ebf2fb;
 }
 .imagenavbar {
-  max-width: 3rem;
+  max-width: 2rem;
 }

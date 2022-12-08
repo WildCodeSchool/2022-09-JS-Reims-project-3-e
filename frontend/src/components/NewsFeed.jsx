@@ -2,9 +2,9 @@ import "./NewsFeed.css";
 
 function NewsFeed() {
   return (
-    <section>
-      <article>
-        <div>
+    <section className="content">
+      <article className="article">
+        <div className="profil">
           <img src="" alt="Avatar Profil" />
           <p>Name of User</p>
         </div>
@@ -18,13 +18,12 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <ul>
-          <li>Like</li>
-          <li>Share</li>
+        <ul className="listfeedback">
+          <li className="feedback">Like</li>
         </ul>
       </article>
-      <article>
-        <div>
+      <article className="article">
+        <div className="profil">
           <img src="" alt="Avatar Profil" />
           <p>Name of User</p>
         </div>
@@ -38,13 +37,12 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <ul>
-          <li>Like</li>
-          <li>Share</li>
+        <ul className="listfeedback">
+          <li className="feedback">Like</li>
         </ul>
       </article>
-      <article>
-        <div>
+      <article className="article">
+        <div className="profil">
           <img src="" alt="Avatar Profil" />
           <p>Name of User</p>
         </div>
@@ -58,13 +56,12 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <ul>
-          <li>Like</li>
-          <li>Share</li>
+        <ul className="listfeedback">
+          <li className="feedback">Like</li>
         </ul>
       </article>
-      <article>
-        <div>
+      <article className="article">
+        <div className="profil">
           <img src="" alt="Avatar Profil" />
           <p>Name of User</p>
         </div>
@@ -78,9 +75,8 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <ul>
-          <li>Like</li>
-          <li>Share</li>
+        <ul className="listfeedback">
+          <li className="feedback">Like</li>
         </ul>
       </article>
     </section>
