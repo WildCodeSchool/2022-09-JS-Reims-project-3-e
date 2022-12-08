@@ -1,4 +1,10 @@
 section {
   overflow-y: scroll;
   height: 91vh;
+  scrollbar-width: none;
+}
+
+section::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none; /* Firefox */
 }
