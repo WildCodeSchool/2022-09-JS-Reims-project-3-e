@@ -1,5 +1,24 @@
-h1 {
+.news-feed p , .news-feed h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
+  font-style: initial;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0em;
+  border: 0em;
+  padding: 0em;
+  
+}
+
+
+.news-feed h1 {
+  color: rgb(21, 162, 13);
   border-width: 1px;
   border-style: outset;
-  border-color: black;
+  border-color: rgb(55, 66, 51);
+  background: linear-gradient(0.25turn, #2053ea, #ebf8e1, #11de14);;
+  justify-content: space-between;
+  
 }
