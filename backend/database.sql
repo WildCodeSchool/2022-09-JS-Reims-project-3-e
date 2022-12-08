@@ -4,12 +4,10 @@ CREATE TABLE article (
   content VARCHAR(280) NOT NULL
 ) engine=InnoDB default charset=latin1;
 
-INSERT INTO article (date, content) VALUES
+INSERT INTO article (title, content) VALUES
   ('Lorem Title 1', 
-  'Lorem Content 1');
-
+  'Lorem Content 1'),
   ('Lorem Title 2', 
-  'Lorem Content 2');
-
+  'Lorem Content 2'),
   ('Lorem Title 3', 
   'Lorem Content 3');
