@@ -5,9 +5,8 @@ CREATE TABLE article (
 ) engine=InnoDB default charset=latin1;
 
 INSERT INTO article (title, content) VALUES
-  ('Lorem Title 1', 
-  'Lorem Content 1'),
-  ('Lorem Title 2', 
-  'Lorem Content 2'),
-  ('Lorem Title 3', 
-  'Lorem Content 3');
+  ('Titre Article', 
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vel, perspiciatis tempore quae vitae animi doloremque perferendis dolore, expedita alias necessitatibus sequi accusantium facere quasi eius natus? Expedita, nemo animi'),
+
+  ('Titre Article', 
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vel, perspiciatis tempore quae vitae animi doloremque perferendis dolore, expedita alias necessitatibus sequi accusantium facere quasi eius natus? Expedita, nemo animi');

@@ -10,8 +10,6 @@ router.put("/items/:id", itemControllers.edit);
 router.post("/items", itemControllers.add);
 router.delete("/items/:id", itemControllers.destroy);
 
-module.exports = router;
-
 const articles = [
   { title: "Lorem ipsum 1", content: "Lorem ipsum 1" },
   { title: "Lorem ipsum 2", content: "Lorem ipsum 2" },
