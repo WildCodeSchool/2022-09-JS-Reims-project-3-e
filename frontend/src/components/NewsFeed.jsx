@@ -20,13 +20,13 @@ function NewsFeed() {
         />
         <h1>CHSCT</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Flash Sécurité : La bonne posture suivant les tâches. Pour les
+          salariés travaillant assis il est important de positionner l'écran
+          aligné à l'axe des yeux. Ni trop haut, ni trop bas. Pour les salariés
+          ayant dans le cadre de leurs missions à porter des charges, il est
+          important de bien maintenir un axe droit de la coloone vertébrale, et
+          lorsque l'on doit se baisser ce sont les jambes qui flechissent et pas
+          le dos qui se courbe
         </p>
         <div className="isFavorite"> </div>
       </article>
@@ -46,13 +46,9 @@ function NewsFeed() {
         />
         <h1>CHSCT</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Nous vous rappelons que l'élection des délégués du personnel au aura
+          lieu prochainement. Les listes des différents candidats vous ont été
+          communiqué par mail.
         </p>
         <div className="isFavorite"> </div>
       </article>
@@ -72,13 +68,10 @@ function NewsFeed() {
         />
         <h1>CHSCT</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Dans le cadre du championnat de football inter-entreprise
+          l'association AS ENEDIS vous confie à son match phare contre
+          l'OLYMPIQUE TOTAL ENREGIES. Les joueurs ont besoin de votre soutien
+          pour défendre les couleurs de notre entreprise!
         </p>
         <div className="notFavorite"> </div>
       </article>
