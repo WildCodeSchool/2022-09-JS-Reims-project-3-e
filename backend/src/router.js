@@ -11,6 +11,9 @@ router.post("/items", itemControllers.add);
 router.delete("/items/:id", itemControllers.destroy);
 
 const articles = [{ title: "Title", content: "Content" }];
+const usersControllers = require("./controllers/userControllers");
+
+router.get("/users", usersControllers.browse);
 
 router.get("/articles", (req, res) => {
   res.json(articles);
