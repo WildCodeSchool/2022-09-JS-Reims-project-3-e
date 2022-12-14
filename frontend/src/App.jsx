@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./components/NavBar.css";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Menu from "./components/Menu";
 import Profil from "./components/Profil";
+import Login from "./components/Login/Login";
+
 import "./App.css";
 
 function App() {
-  return (
+  const [isLogged, setIsLogged] = useState(false);
+  let content = (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,6 +20,12 @@ function App() {
       </Routes>
 
       <NavBar />
+    </>
+  );
+  return (
+    <>
+      {!isLogged && <Login setIsLogged={setIsLogged} />}
+      {isLogged && content}
     </>
   );
 }
