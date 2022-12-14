@@ -15,4 +15,5 @@ function Home() {
 
   return <NewsFeed communicationPlans={articles} />;
 }
+
 export default Home;
