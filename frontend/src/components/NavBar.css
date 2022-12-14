@@ -5,6 +5,7 @@
 }
 .navbar {
   display: flex;
+  min-height: 100vh;
   justify-content: flex-end;
   flex-direction: column;
   position: sticky;

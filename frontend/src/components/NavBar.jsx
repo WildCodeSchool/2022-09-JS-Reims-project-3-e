@@ -1,4 +1,4 @@
-import "./NavBar.css";
+import { Link } from "react-router-dom";
 import home from "../assets/home.png";
 import menu from "../assets/menu.png";
 import user from "../assets/user.png";
@@ -9,17 +9,23 @@ function NavBar() {
       <ul className="list">
         <li className="listbutton">
           <button className="button" type="button">
-            <img className="imagenavbar" src={home} alt="home" />
+            <Link to="/">
+              <img className="imagenavbar" src={home} alt="home" />
+            </Link>
           </button>
         </li>
         <li className="listbutton">
           <button className="button" type="button">
-            <img className="imagenavbar" src={menu} alt="home" />
+            <Link to="/menu">
+              <img className="imagenavbar" src={menu} alt="home" />
+            </Link>
           </button>
         </li>
         <li className="listbutton">
           <button className="button" type="button">
-            <img className="imagenavbar" src={user} alt="home" />
+            <Link to="/profil">
+              <img className="imagenavbar" src={user} alt="home" />
+            </Link>
           </button>
         </li>
       </ul>

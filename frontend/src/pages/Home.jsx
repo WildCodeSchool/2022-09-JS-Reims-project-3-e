@@ -17,4 +17,5 @@ function Home() {
 
   return <NewsFeed />;
 }
+
 export default Home;
