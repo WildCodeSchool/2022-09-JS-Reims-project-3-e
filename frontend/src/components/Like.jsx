@@ -6,15 +6,13 @@ function Post() {
     setIsFavorite(!isFavorite);
   }
   return (
-    <div>
-      <button
-        id="favorite"
-        type="button"
-        onClick={handleClickFavorite}
-        className={isFavorite ? "isFavorite" : "notFavorite"}
-        label="like"
-      />
-    </div>
+    <button
+      id="favorite"
+      type="button"
+      onClick={handleClickFavorite}
+      className={isFavorite ? "isFavorite" : "notFavorite"}
+      label="like"
+    />
   );
 }
 
