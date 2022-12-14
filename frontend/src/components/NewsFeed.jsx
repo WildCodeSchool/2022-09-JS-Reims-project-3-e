@@ -1,4 +1,7 @@
+import React from "react";
 import PropTypes from "prop-types";
+import Like from "./Like";
+
 import CommunicationPlanCard from "./CommunicationPlanCard";
 import "./NewsFeed.css";
 
@@ -30,7 +33,7 @@ function NewsFeed({ communicationPlans }) {
             );
           })}
         </div>
-        <div className="isFavorite"> </div>
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -57,7 +60,7 @@ function NewsFeed({ communicationPlans }) {
             );
           })}
         </div>
-        <div className="isFavorite"> </div>
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -84,7 +87,7 @@ function NewsFeed({ communicationPlans }) {
             );
           })}
         </div>
-        <div className="notFavorite"> </div>
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -111,7 +114,7 @@ function NewsFeed({ communicationPlans }) {
             );
           })}
         </div>
-        <div className="isFavorite"> </div>
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -138,7 +141,7 @@ function NewsFeed({ communicationPlans }) {
             );
           })}
         </div>
-        <div className="notFavorite"> </div>
+        <Like isFavorite={false} />
       </article>
     </section>
   );
