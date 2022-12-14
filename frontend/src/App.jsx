@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
-  let content = (
+  const content = (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
