@@ -13,8 +13,6 @@ function Home() {
       .then((data) => setArticles(data));
   }, []);
 
-  console.warn(articles);
-
-  return <NewsFeed />;
+  return <NewsFeed communicationPlans={articles} />;
 }
 export default Home;
