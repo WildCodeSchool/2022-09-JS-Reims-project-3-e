@@ -1,14 +1,9 @@
-import React, { useState } from "react";
-import Post from "./Post";
+import React from "react";
+import Like from "./Like";
 
 import "./NewsFeed.css";
 
 function NewsFeed() {
-  const [isFavorite, setIsFavorite] = useState();
-  function handleClickFavorite() {
-    setIsFavorite(!isFavorite);
-  }
-
   return (
     <section className="content">
       <article className="article">
@@ -35,7 +30,7 @@ function NewsFeed() {
           lorsque l'on doit se baisser ce sont les jambes qui flechissent et pas
           le dos qui se courbe
         </p>
-        <Post isFavorite={false} />
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -57,7 +52,7 @@ function NewsFeed() {
           lieu prochainement. Les listes des différents candidats vous ont été
           communiqué par mail.
         </p>
-        <Post isFavorite={false} />
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -80,7 +75,7 @@ function NewsFeed() {
           l'OLYMPIQUE TOTAL ENREGIES. Les joueurs ont besoin de votre soutien
           pour défendre les couleurs de notre entreprise!
         </p>
-        <Post isFavorite={false} />
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -106,7 +101,7 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <Post isFavorite={false} />
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -132,7 +127,7 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <Post isFavorite={false} />
+        <Like isFavorite={false} />
       </article>
     </section>
   );
