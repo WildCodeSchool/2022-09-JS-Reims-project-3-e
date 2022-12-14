@@ -1,7 +1,6 @@
 import "../components/NavBar.css";
 import { useEffect, useState } from "react";
 import NewsFeed from "../components/NewsFeed";
-import NavBar from "../components/NavBar";
 
 function Home() {
   const [articles, setArticles] = useState([]);
@@ -14,11 +13,6 @@ function Home() {
       .then((data) => setArticles(data));
   }, []);
 
-  return (
-    <>
-      <NewsFeed communicationPlans={articles} />
-      <NavBar />
-    </>
-  );
+  return <NewsFeed communicationPlans={articles} />;
 }
 export default Home;
