@@ -13,10 +13,6 @@ router.delete("/items/:id", itemControllers.destroy);
 const usersControllers = require("./controllers/userControllers");
 
 router.get("/users", usersControllers.browse);
-router.get("/users/:id", usersControllers.read);
-router.put("/users/:id", usersControllers.edit);
-router.post("/users", usersControllers.add);
-router.delete("/users/:id", usersControllers.destroy);
 
 const articles = [
   { title: "Lorem ipsum 1", content: "Lorem ipsum 1" },

@@ -35,7 +35,7 @@ VALUES
     "Himeur",
     "farid13",
     "Chalons en Champagne",
-    "123"
+    "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"
   ),
    (
     true,
@@ -44,7 +44,7 @@ VALUES
     "Boullado",
     "simon13",
     "Chalons en Champagne",
-    "123"
+    "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"
   ),
    (
     true,
@@ -53,7 +53,7 @@ VALUES
     "Nou",
     "olivier13",
     "Reims",
-    "123"
+    "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"
   ),
    (
     true,
@@ -62,7 +62,7 @@ VALUES
     "Bakaev",
     "adnan13",
     "Reims",
-    "123"
+    "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"
   ), 
   (
     true,
@@ -71,5 +71,5 @@ VALUES
     "Beaugosse",
     "pierre-yves13",
     "Reims",
-    "123"
+    "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"
   );
