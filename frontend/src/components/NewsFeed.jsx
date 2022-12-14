@@ -1,7 +1,14 @@
+import React, { useState } from "react";
+import Post from "./Post";
+
 import "./NewsFeed.css";
-import React from "react";
 
 function NewsFeed() {
+  const [isFavorite, setIsFavorite] = useState();
+  function handleClickFavorite() {
+    setIsFavorite(!isFavorite);
+  }
+
   return (
     <section className="content">
       <article className="article">
@@ -28,7 +35,7 @@ function NewsFeed() {
           lorsque l'on doit se baisser ce sont les jambes qui flechissent et pas
           le dos qui se courbe
         </p>
-        <div className="isFavorite"> </div>
+        <Post isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -50,7 +57,7 @@ function NewsFeed() {
           lieu prochainement. Les listes des différents candidats vous ont été
           communiqué par mail.
         </p>
-        <div className="isFavorite"> </div>
+        <Post isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -73,7 +80,7 @@ function NewsFeed() {
           l'OLYMPIQUE TOTAL ENREGIES. Les joueurs ont besoin de votre soutien
           pour défendre les couleurs de notre entreprise!
         </p>
-        <div className="notFavorite"> </div>
+        <Post isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -99,7 +106,7 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <div className="isFavorite"> </div>
+        <Post isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -125,7 +132,7 @@ function NewsFeed() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <div className="notFavorite"> </div>
+        <Post isFavorite={false} />
       </article>
     </section>
   );
