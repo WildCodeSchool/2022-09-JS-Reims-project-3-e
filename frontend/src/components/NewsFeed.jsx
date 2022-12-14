@@ -1,9 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Like from "./Like";
 
+import CommunicationPlanCard from "./CommunicationPlanCard";
 import "./NewsFeed.css";
 
-function NewsFeed() {
+function NewsFeed({ communicationPlans }) {
   return (
     <section className="content">
       <article className="article">
@@ -20,16 +22,17 @@ function NewsFeed() {
           src="https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2018/12/10/node_20755/530170/public/2018/12/10/B9717886568Z.1_20181210094232_000%2BGERCIOLFT.1-0.jpg?itok=t6jVgxVZ1544431361"
           alt="imagecontent"
         />
-        <h1>CHSCT</h1>
-        <p>
-          Flash Sécurité : La bonne posture suivant les tâches. Pour les
-          salariés travaillant assis il est important de positionner l'écran
-          aligné à l'axe des yeux. Ni trop haut, ni trop bas. Pour les salariés
-          ayant dans le cadre de leurs missions à porter des charges, il est
-          important de bien maintenir un axe droit de la coloone vertébrale, et
-          lorsque l'on doit se baisser ce sont les jambes qui flechissent et pas
-          le dos qui se courbe
-        </p>
+        <div>
+          {communicationPlans.map((communicationPlan) => {
+            return (
+              <CommunicationPlanCard
+                title={communicationPlan.title}
+                content={communicationPlan.content}
+                key={communicationPlan.title}
+              />
+            );
+          })}
+        </div>
         <Like isFavorite={false} />
       </article>
       <article className="article">
@@ -46,12 +49,17 @@ function NewsFeed() {
           src="https://www.enedis.fr/sites/default/files/styles/image_full/public/images/2022-01/enedis-notre-histoire.jpg?itok=0cK77Jh0"
           alt="imagecontent"
         />
-        <h1>CHSCT</h1>
-        <p>
-          Nous vous rappelons que l'élection des délégués du personnel au aura
-          lieu prochainement. Les listes des différents candidats vous ont été
-          communiqué par mail.
-        </p>
+        <div>
+          {communicationPlans.map((communicationPlan) => {
+            return (
+              <CommunicationPlanCard
+                title={communicationPlan.title}
+                content={communicationPlan.content}
+                key={communicationPlan.title}
+              />
+            );
+          })}
+        </div>
         <Like isFavorite={false} />
       </article>
       <article className="article">
@@ -68,13 +76,17 @@ function NewsFeed() {
           src="https://www.creads.com/wp-content/uploads/2021/05/nouveau-logo-erdf-enedis-1024x682-1.jpg"
           alt="imagecontent"
         />
-        <h1>CHSCT</h1>
-        <p>
-          Dans le cadre du championnat de football inter-entreprise
-          l'association AS ENEDIS vous confie à son match phare contre
-          l'OLYMPIQUE TOTAL ENREGIES. Les joueurs ont besoin de votre soutien
-          pour défendre les couleurs de notre entreprise!
-        </p>
+        <div>
+          {communicationPlans.map((communicationPlan) => {
+            return (
+              <CommunicationPlanCard
+                title={communicationPlan.title}
+                content={communicationPlan.content}
+                key={communicationPlan.title}
+              />
+            );
+          })}
+        </div>
         <Like isFavorite={false} />
       </article>
       <article className="article">
@@ -91,16 +103,17 @@ function NewsFeed() {
           src="https://media.lesechos.com/api/v1/images/view/5d96cae73e454674b96053c5/1280x720/0601987664512-web-tete.jpg"
           alt="imagecontent"
         />
-        <h1>CHSCT</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div>
+          {communicationPlans.map((communicationPlan) => {
+            return (
+              <CommunicationPlanCard
+                title={communicationPlan.title}
+                content={communicationPlan.content}
+                key={communicationPlan.title}
+              />
+            );
+          })}
+        </div>
         <Like isFavorite={false} />
       </article>
       <article className="article">
@@ -117,20 +130,30 @@ function NewsFeed() {
           src="https://t4.ftcdn.net/jpg/03/72/67/23/360_F_372672331_idaVL5JtVPgfeUOEJkdrXBe8qgV3rOaQ.jpg"
           alt="imagecontent"
         />
-        <h1>CHSCT</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div>
+          {communicationPlans.map((communicationPlan) => {
+            return (
+              <CommunicationPlanCard
+                title={communicationPlan.title}
+                content={communicationPlan.content}
+                key={communicationPlan.title}
+              />
+            );
+          })}
+        </div>
         <Like isFavorite={false} />
       </article>
     </section>
   );
 }
+
+NewsFeed.propTypes = {
+  communicationPlans: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+};
 
 export default NewsFeed;
