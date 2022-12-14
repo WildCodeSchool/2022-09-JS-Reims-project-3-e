@@ -14,11 +14,9 @@ function Home() {
       .then((data) => setArticles(data));
   }, []);
 
-  console.warn(articles);
-
   return (
     <>
-      <NewsFeed />
+      <NewsFeed communicationPlans={articles} />
       <NavBar />
     </>
   );

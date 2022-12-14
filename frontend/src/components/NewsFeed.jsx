@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import CommunicationPlanCard from "./CommunicationPlanCard";
 import "./NewsFeed.css";
 
-function NewsFeed() {
-  const [communicationPlans, setCommunicationPlans] = useState([]);
-  useEffect(() => {
-    fetch(
-      `${import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000"}/articles`
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        setCommunicationPlans(response);
-      });
-  }, []);
+function NewsFeed({ communicationPlans }) {
   return (
     <div>
       {communicationPlans.map((communicationPlan) => {
@@ -20,12 +10,21 @@ function NewsFeed() {
           <CommunicationPlanCard
             title={communicationPlan.title}
             content={communicationPlan.content}
-            key={communicationPlan.id}
+            key={communicationPlan.title}
           />
         );
       })}
     </div>
   );
 }
+
+NewsFeed.propTypes = {
+  communicationPlans: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+};
 
 export default NewsFeed;
