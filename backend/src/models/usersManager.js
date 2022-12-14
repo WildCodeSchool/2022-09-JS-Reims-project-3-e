@@ -1,9 +1,9 @@
 const AbstractManager = require("./AbstractManager");
 
-class usersManager extends AbstractManager {
+class UsersManager extends AbstractManager {
   constructor() {
     super({ table: "users" });
   }
 }
 
-module.exports = usersManager;
+module.exports = UsersManager;
