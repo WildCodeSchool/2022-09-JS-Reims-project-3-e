@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./components/NavBar.css";
+import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Menu from "./components/Menu";
@@ -13,6 +14,7 @@ function App() {
   const [isLogged, setIsLogged] = useState(false);
   const content = (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />

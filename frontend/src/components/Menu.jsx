@@ -1,4 +1,5 @@
 import "./Menu.css";
+import "./NavBar.css";
 
 function Menu() {
   return (

@@ -13,10 +13,12 @@
 .list {
   display: flex;
   list-style-type: none;
-  background-color: #ebf2fb;
+  background-color: #1423dc;
   justify-content: space-around;
   margin: 0;
-  padding: 1rem;
+  padding: 0.8rem;
+  border-top: solid 2px;
+  border-color: grey;
 }
 .listbutton {
   display: flex;
@@ -25,8 +27,12 @@
   border-radius: 9px;
   border: none;
   box-shadow: none;
-  background-color: #ebf2fb;
+  background-color: #1423dc;
+  padding: 0;
 }
 .imagenavbar {
   max-width: 2rem;
+}
+.imagenavbarmenu {
+  max-width: 2.5rem;
 }
