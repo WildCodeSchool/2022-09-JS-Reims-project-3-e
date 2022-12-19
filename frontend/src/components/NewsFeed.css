@@ -4,7 +4,7 @@
   gap: 1.5rem;
   overflow-y: scroll;
   scrollbar-width: none;
-  padding: 2rem 1.5rem 0rem 1.5rem;
+  padding: 0rem 1.5rem 0rem 1.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .content::-webkit-scrollbar {
@@ -14,8 +14,8 @@
 .article {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 1rem 1rem 1rem;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border-bottom: solid 1px grey;
 }
 .profil {
@@ -28,25 +28,29 @@
   max-height: 3rem;
   border-radius: 10rem;
 }
+.imagecontent {
+  border-radius: 0.5rem;
+  box-shadow: -5px 0px 3px 0px #aaa;
+}
 .isFavorite {
   background-color: white;
   border: none;
-  width: 40px;
-  height: 60px;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg");
+  width: 4rem;
+  height: 4rem;
   background-size: 100%;
   align-self: flex-start;
 }
 .notFavorite {
   background-color: white;
   border: none;
-  width: 40px;
-  height: 60px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
+  height: 4rem;
+  width: 4rem;
   background-size: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
   align-self: flex-start;
 }
 .enedislogo {
-  max-width: 8rem;
+  width: 8rem;
   margin: 1rem;
 }

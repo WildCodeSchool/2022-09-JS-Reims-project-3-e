@@ -39,7 +39,7 @@ function NewsFeed({ communicationPlans }) {
         <div className="profil">
           <img
             className="imageprofil"
-            src="https://media-exp1.licdn.com/dms/image/D4E35AQF5X3q2dvbUjA/profile-framedphoto-shrink_800_800/0/1663860060762?e=1671112800&v=beta&t=509_YHyLf-PeRCdSruGq95noIi1rdbNVvReutK60Gqw"
+            src="https://media.licdn.com/dms/image/D4E35AQF5X3q2dvbUjA/profile-framedphoto-shrink_800_800/0/1663860060762?e=1672066800&v=beta&t=_2Bg4Cev7U-acvNU32BNp0ekym36jot97UwQZAF2h7M"
             alt="Avatar Profil"
           />
           <p>Olivier N</p>
@@ -93,7 +93,7 @@ function NewsFeed({ communicationPlans }) {
         <div className="profil">
           <img
             className="imageprofil"
-            src="https://media-exp1.licdn.com/dms/image/D4E35AQFi4xZrBf0K2w/profile-framedphoto-shrink_400_400/0/1667069647405?e=1671112800&v=beta&t=Lh0UxsrLiiPbKq_9fYrPsTIAAb39hRrHjVniOmwGrgo"
+            src="https://media.licdn.com/dms/image/D4E35AQFi4xZrBf0K2w/profile-framedphoto-shrink_800_800/0/1667069647405?e=1672066800&v=beta&t=rk0bP8vy8NT_kjMF79tgj444e_Ymg_wDUZVnKKJmbkI"
             alt="Avatar Profil"
           />
           <p>Adnan B</p>

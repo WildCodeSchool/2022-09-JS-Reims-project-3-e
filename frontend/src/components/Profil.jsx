@@ -1,5 +1,4 @@
 import "./Profil.css";
-import "./NavBar.css";
 
 function Profil() {
   return (
