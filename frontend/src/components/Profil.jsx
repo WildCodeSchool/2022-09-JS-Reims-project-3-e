@@ -4,8 +4,14 @@ function Profil() {
   return (
     <div className="profilpage">
       <ul>
-        <li>Mon profil</li>
-        <li>Deconnexion</li>
+        <button className="buttonwidget" type="button">
+          <img src="" alt="profil" />
+        </button>
+        <li>
+          <button className="buttonwidget" type="button">
+            <img src="" alt="disconnect" />
+          </button>
+        </li>
       </ul>
     </div>
   );
