@@ -3,7 +3,7 @@ import "./NewsFeed.css";
 
 function Header() {
   return (
-    <div>
+    <div className="header">
       <img className="enedislogo" src={enedislogo} alt="logo" />
     </div>
   );
