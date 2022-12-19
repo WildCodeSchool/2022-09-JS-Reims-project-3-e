@@ -37,13 +37,7 @@ function App() {
     </>
   );
 
-  return (
-    <>
-      {!isLogged && !isActive && login}
-
-      {isLogged && content}
-    </>
-  );
+  return !isLogged && !isActive ? login : content;
 }
 
 export default App;
