@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.log-page {
+  display: flex;
+  flex-direction: column;
+}
+.log-page > button {
+  margin: auto;
+}
