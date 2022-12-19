@@ -2,31 +2,16 @@ import React, { useState, useEffect, useReducer } from "react";
 
 import PropTypes from "prop-types";
 
+import Modal from "../../UI/Modal";
+
 import Card from "../../UI/Card";
 import Button from "../../UI/Button";
 import classes from "./Login.module.css";
-
-const emailReducer = (state, action) => {
-  if (action.type === "USER_INPUT") {
-    return { value: action.val, isValid: action.val.includes("@") };
-  }
-  if (action.type === "INPUT_BLUR") {
-    return { value: state.value, isValid: state.value.includes("@") };
-  }
-  return { value: "", isValid: false };
-};
-
-const passwordReducer = (state, action) => {
-  if (action.type === "USER_INPUT") {
-    return { value: action.val, isValid: action.val.trim().length > 6 };
-  }
-  if (action.type === "INPUT_BLUR") {
-    return { value: state.value, isValid: state.value.trim().length > 6 };
-  }
-  return { value: "", isValid: false };
-};
+import { emailReducer, passwordReducer } from "./loginHelpers";
 
 export default function Login({ setIsLogged }) {
+  const [token, setToken] = useState(null);
+  const [error, setError] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
@@ -38,18 +23,15 @@ export default function Login({ setIsLogged }) {
     isValid: null,
   });
 
-  const { isValid: emailIsValid } = emailState;
-  const { isValid: passwordIsValid } = passwordState;
-
   useEffect(() => {
     const identifier = setTimeout(() => {
-      setFormIsValid(emailIsValid && passwordIsValid);
+      setFormIsValid(emailState.isValid && passwordState.isValid);
     }, 500);
 
     return () => {
       clearTimeout(identifier);
     };
-  }, [emailIsValid, passwordIsValid]);
+  }, [emailState.isValid, passwordState.isValid]);
 
   const emailChangeHandler = (event) => {
     dispatchEmail({ type: "USER_INPUT", val: event.target.value });
@@ -69,11 +51,48 @@ export default function Login({ setIsLogged }) {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    setIsLogged(true);
+    fetch("http://localhost:8080/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: emailState.value,
+        password: passwordState.value,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.token) {
+          setToken(data.token);
+          setIsLogged(true);
+        }
+      });
+    if (!token) {
+      setTimeout(() => {
+        setError(true);
+      }, 500);
+    }
+  };
+
+  const hideErrorMessage = () => {
+    setError(false);
   };
 
   return (
     <Card classNames={classes.login}>
+      {error && (
+        <Modal onClose={hideErrorMessage}>
+          <h1>Erreur</h1>
+          <p>
+            Une erreur est survenue. Votre email ou mot de passe n'est pas
+            correct. Veuillez réessayer plus tard
+          </p>
+          <button type="button" onClick={hideErrorMessage}>
+            Annuler
+          </button>
+        </Modal>
+      )}
       <form onSubmit={submitHandler}>
         <div
           className={`${classes.control} ${

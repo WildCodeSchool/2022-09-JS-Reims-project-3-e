@@ -11,6 +11,20 @@ import "./App.css";
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const switchPage = () => {
+    setIsActive(!isActive);
+  };
+
+  const login = (
+    <div className="log-page">
+      <Login setIsLogged={setIsLogged} />
+      <button onClick={switchPage} type="button">
+        Premiere fois? Creet votre compte!
+      </button>
+    </div>
+  );
   const content = (
     <>
       <Routes>
@@ -22,9 +36,11 @@ function App() {
       <NavBar />
     </>
   );
+
   return (
     <>
-      {!isLogged && <Login setIsLogged={setIsLogged} />}
+      {!isLogged && !isActive && login}
+
       {isLogged && content}
     </>
   );
