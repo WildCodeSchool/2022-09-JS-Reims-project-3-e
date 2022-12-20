@@ -1,5 +1,7 @@
 import { useState, useEffect, useReducer } from "react";
 
+import PropTypes from "prop-types";
+
 import {
   emailReducer,
   passwordReducer,
@@ -13,7 +15,7 @@ import Card from "../../UI/Card";
 import Button from "../../UI/Button";
 import classes from "./Signup.module.css";
 
-export default function Signup() {
+export default function Signup({ onRes }) {
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
@@ -102,6 +104,7 @@ export default function Signup() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        admin: false,
         firstname: firstnameState.value,
         lastname: lastnameState.value,
         username: usernameState.value,
@@ -110,14 +113,7 @@ export default function Signup() {
         password: passwordState.value,
       }),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.error) {
-          alert(data.error);
-        } else {
-          alert(data.message);
-        }
-      })
+      .then((res) => onRes(res))
       .catch((err) => {
         console.error(err);
       });
@@ -243,3 +239,11 @@ export default function Signup() {
     </Card>
   );
 }
+
+Signup.defaultProps = {
+  onRes: () => {},
+};
+
+Signup.propTypes = {
+  onRes: PropTypes.func,
+};
