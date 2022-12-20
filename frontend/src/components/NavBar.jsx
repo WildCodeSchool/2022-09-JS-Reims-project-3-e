@@ -17,7 +17,7 @@ function NavBar() {
         <li className="listbutton">
           <button className="button" type="button">
             <Link to="/menu">
-              <img className="imagenavbar" src={menu} alt="home" />
+              <img className="imagenavbarmenu" src={menu} alt="home" />
             </Link>
           </button>
         </li>
