@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./components/NavBar.css";
+import Signup from "./components/Signup/Signup";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
@@ -15,7 +16,10 @@ function App() {
   const [isActive, setIsActive] = useState(false);
 
   const switchPage = () => {
-    setIsActive(!isActive);
+    setIsActive(true);
+  };
+  const resForm = () => {
+    setIsActive(false);
   };
 
   const login = (
@@ -39,7 +43,13 @@ function App() {
     </>
   );
 
-  return !isLogged && !isActive ? login : content;
+  return (
+    <>
+      {!isLogged && !isActive && login}
+      {!isLogged && isActive && <Signup onRes={resForm} />}
+      {isLogged && content}
+    </>
+  );
 }
 
 export default App;
