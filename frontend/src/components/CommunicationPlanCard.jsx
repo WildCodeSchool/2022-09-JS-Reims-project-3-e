@@ -2,9 +2,11 @@ import PropTypes from "prop-types";
 
 import Like from "./Like";
 
-export default function CommunicationPlanCard({ title, content }) {
-  const lien =
-    "https://www.enedis.fr/sites/default/files/styles/image_full/public/images/2022-01/enedis-notre-histoire.jpg?itok=0cK77Jh0";
+export default function CommunicationPlanCard({
+  title,
+  content,
+  image_url: imageUrl,
+}) {
   return (
     <article className="article">
       <div className="profil">
@@ -15,7 +17,7 @@ export default function CommunicationPlanCard({ title, content }) {
         />
         <p>John Doe</p>
       </div>
-      <img className="imagecontent" src={lien} alt="imagecontent" />
+      <img className="imageurl" src={imageUrl} alt="imageurl" />
       <h1>{title}</h1>
       <p>{content}</p>
       <Like isFavorite={false} />
@@ -25,4 +27,5 @@ export default function CommunicationPlanCard({ title, content }) {
 CommunicationPlanCard.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
+  image_url: PropTypes.string.isRequired,
 };
