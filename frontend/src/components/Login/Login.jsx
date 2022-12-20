@@ -88,7 +88,11 @@ export default function Login({ setIsLogged }) {
             Une erreur est survenue. Votre email ou mot de passe n'est pas
             correct. Veuillez réessayer plus tard
           </p>
-          <button type="button" onClick={hideErrorMessage}>
+          <button
+            className="buttonlogin"
+            type="button"
+            onClick={hideErrorMessage}
+          >
             Annuler
           </button>
         </Modal>
