@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Like from "./Like";
 import buttonedited from "../assets/buttonedited.png";
+import comment from "../assets/comment.png";
+import heart from "../assets/heart.png";
 
 import CommunicationPlanCard from "./CommunicationPlanCard";
 import "./NewsFeed.css";
@@ -50,7 +52,35 @@ function NewsFeed({ communicationPlans }) {
             );
           })}
         </div>
-        <Like isFavorite={false} />
+        <div className="contentofpublication">
+          <h1 className="titlecontent">
+            Enedis constate une baisse historique de 20% de la consommation
+            électrique de l'éclairage public
+          </h1>
+          <p className="descriptioncontent">
+            Au cours des 15 premiers jours de décembre 2022, Enedis constate une
+            baisse historique de 20% de la consommation de l'éclairage public en
+            France. Alors que chacun cherche les leviers de sobriété, les
+            collectivités mettent en oeuvre celui de l'éclairage public, qui
+            représente plus de 40% de leur consommation électrique annuelle.
+          </p>
+        </div>
+        <div className="buttonlikeandcomment">
+          <div className="likeandcount">
+            <p className="numberoflike"> 4 </p>
+            <img src={heart} className="countoflike" alt="countoflike" />
+          </div>
+          <div className="buttonlikeandcomments">
+            <div className="likes">
+              <Like isFavorite={false} />
+              <p className="styleoflike">J'aime</p>
+            </div>
+            <div className="comments">
+              <img className="comment" src={comment} alt="comment" />
+              <p className="styleofcomment">Je commente</p>
+            </div>
+          </div>
+        </div>
       </article>
       <article className="article">
         <div className="profil">
