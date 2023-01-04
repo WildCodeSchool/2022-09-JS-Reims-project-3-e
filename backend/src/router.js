@@ -15,7 +15,13 @@ router.delete(
   communicationPlansControllers.destroy
 );
 
-const articles = [{ title: "Title", content: "Content" }];
+const articles = [
+  {
+    title: "Title",
+    content: "Content",
+    image_url: "https://picsum.photos/200/300",
+  },
+];
 
 router.get("/users", usersControllers.browse);
 router.get("/users/:id", usersControllers.read);
