@@ -1,11 +1,12 @@
 DROP TABLE IF EXISTS article;
-CREATE TABLE article (
+DROP TABLE IF EXISTS communication_plans;
+CREATE TABLE communication_plans (
   id int primary key NOT NULL AUTO_INCREMENT,
   title VARCHAR(100)NOT NULL,
   content VARCHAR(560) NOT NULL
 ) engine=InnoDB default charset=utf8;
 
-INSERT INTO article (title, content) 
+INSERT INTO communication_plans (title, content) 
 VALUES 
   ("Identifier la cible", 
   "Un plan de communication ne s’adresse jamais à tout le monde. Sinon, il ne peut pas être efficace. Il doit donc être ciblé de manière précise, ce qui permettra d’atteindre les objectifs préalablement fixés. Cette étape permet d’identifier les segments ou les sous-segments de clientèle à atteindre."),
