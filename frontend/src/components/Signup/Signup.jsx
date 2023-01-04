@@ -98,7 +98,7 @@ export default function Signup({ onRes }) {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8080/users", {
+    fetch("http://localhost:5000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +107,7 @@ export default function Signup({ onRes }) {
         admin: false,
         firstname: firstnameState.value,
         lastname: lastnameState.value,
-        username: usernameState.value,
+        login: usernameState.value,
         city: cityState.value,
         email: emailState.value,
         password: passwordState.value,
