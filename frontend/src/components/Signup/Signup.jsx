@@ -107,7 +107,7 @@ export default function Signup({ onRes }) {
         admin: false,
         firstname: firstnameState.value,
         lastname: lastnameState.value,
-        username: usernameState.value,
+        login: usernameState.value,
         city: cityState.value,
         email: emailState.value,
         password: passwordState.value,
