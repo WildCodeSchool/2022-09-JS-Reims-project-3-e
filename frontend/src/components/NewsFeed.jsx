@@ -190,6 +190,16 @@ function NewsFeed({ communicationPlans }) {
         </div>
         <Like isFavorite={false} />
       </article>
+      {communicationPlans.map((communicationPlan) => {
+        return (
+          <CommunicationPlanCard
+            title={communicationPlan.title}
+            content={communicationPlan.content}
+            image_url={communicationPlan.image_url}
+            key={communicationPlan.title}
+          />
+        );
+      })}
     </section>
   );
 }
@@ -199,6 +209,7 @@ NewsFeed.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
+      image_url: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
 };

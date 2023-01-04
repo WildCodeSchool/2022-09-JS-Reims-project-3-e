@@ -2,15 +2,18 @@ const express = require("express");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
+const communicationPlansControllers = require("./controllers/communicationPlansControllers");
 const { hashPassword } = require("./auth");
 const usersControllers = require("./controllers/userControllers");
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+router.get("/communication-plans", communicationPlansControllers.browse);
+router.get("/communication-plans/:id", communicationPlansControllers.read);
+router.put("/communication-plans/:id", communicationPlansControllers.edit);
+router.post("/communication-plans", communicationPlansControllers.add);
+router.delete(
+  "/communication-plans/:id",
+  communicationPlansControllers.destroy
+);
 
 const articles = [{ title: "Title", content: "Content" }];
 
@@ -19,7 +22,7 @@ router.get("/users/:id", usersControllers.read);
 router.post("/api/login", usersControllers.login);
 router.post("/users/", hashPassword, usersControllers.add);
 
-router.get("/articles", (req, res) => {
+router.get("/communication-plans", (req, res) => {
   res.json(articles);
 });
 
