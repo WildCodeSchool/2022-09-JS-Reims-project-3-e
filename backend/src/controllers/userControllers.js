@@ -30,7 +30,7 @@ const read = (req, res) => {
     });
 };
 
-const edit = async (req, res) => {
+const edit = (req, res) => {
   const { firstname, lastname, city, login } = req.body;
 
   const user = {
