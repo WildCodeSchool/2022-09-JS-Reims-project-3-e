@@ -1,5 +1,4 @@
 DROP TABLE IF EXISTS article;
-DROP TABLE IF EXISTS communication_plans;
 CREATE TABLE communication_plans (
   id int primary key NOT NULL AUTO_INCREMENT,
   title VARCHAR(100)NOT NULL,
