@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Like from "./Like";
+import buttonedited from "../assets/buttonedited.png";
 
 import CommunicationPlanCard from "./CommunicationPlanCard";
 import "./NewsFeed.css";
@@ -10,12 +11,28 @@ function NewsFeed({ communicationPlans }) {
     <section className="content">
       <article className="article">
         <div className="profil">
-          <img
-            className="imageprofil"
-            src="https://media-exp1.licdn.com/dms/image/D4E03AQEKkzhQP5r5lg/profile-displayphoto-shrink_800_800/0/1670411909070?e=1675900800&v=beta&t=QJDauJPYN2CGqSL-Ky0sPjnN9w09IyXjWoivLOlFQKg"
-            alt="Avatar Profil"
-          />
-          <p>Simon B</p>
+          <div className="userprofil">
+            <img
+              className="imageprofil"
+              src="https://media-exp1.licdn.com/dms/image/D4E03AQEKkzhQP5r5lg/profile-displayphoto-shrink_800_800/0/1670411909070?e=1675900800&v=beta&t=QJDauJPYN2CGqSL-Ky0sPjnN9w09IyXjWoivLOlFQKg"
+              alt="Avatar Profil"
+            />
+            <div className="nameuser">
+              <p>Simon B</p>
+              <div className="cityandcompany">
+                <p>Reims</p>
+                <p>WCS</p>
+              </div>
+            </div>
+          </div>
+          <div className="userparameter">
+            <p className="dateofpublish">5 jours</p>
+            <img
+              className="buttonedited"
+              src={buttonedited}
+              alt="icon edited and remove"
+            />
+          </div>
         </div>
         <img
           className="imagecontent"
