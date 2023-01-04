@@ -1,1 +1,23 @@
-
+.menupage {
+  min-height: 81.6vh;
+}
+.buttonwidget {
+  border: none;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.listcategories {
+  margin: 60px 0px 30px 0px;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-gap: 50px;
+  justify-content: space-around;
+}
+.category {
+  list-style-type: none;
+}
+button > img {
+  width: 6.72rem;
+  height: 6.72rem;
+}
