@@ -20,6 +20,8 @@ router.post("/api/login", usersControllers.login);
 router.post("/users/", hashPassword, usersControllers.add);
 router.put("/users/:id", usersControllers.edit);
 
+router.delete("/users/:id", usersControllers.destroy);
+
 router.get("/articles", (req, res) => {
   res.json(articles);
 });
