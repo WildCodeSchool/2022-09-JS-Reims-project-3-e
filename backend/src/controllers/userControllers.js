@@ -31,11 +31,9 @@ const read = (req, res) => {
 };
 
 const edit = async (req, res) => {
-  const { email, password, firstname, lastname, city, login } = req.body;
+  const { firstname, lastname, city, login } = req.body;
 
   const user = {
-    email,
-    password,
     firstname,
     lastname,
     city,
