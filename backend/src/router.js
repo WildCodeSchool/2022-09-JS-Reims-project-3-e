@@ -18,6 +18,7 @@ router.get("/users", usersControllers.browse);
 router.get("/users/:id", usersControllers.read);
 router.post("/api/login", usersControllers.login);
 router.post("/users/", hashPassword, usersControllers.add);
+router.put("/users/:id", usersControllers.edit);
 
 router.get("/articles", (req, res) => {
   res.json(articles);
