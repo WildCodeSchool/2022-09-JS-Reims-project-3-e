@@ -51,7 +51,7 @@ export default function Login({ setIsLogged }) {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8080/api/login", {
+    fetch("http://localhost:5000/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
