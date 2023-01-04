@@ -30,28 +30,6 @@ const read = (req, res) => {
     });
 };
 
-// const edit = (req, res) => {
-//   const users = req.body;
-
-//   // TODO validations (length, format...)
-
-//   users.id = parseInt(req.params.id, 10);
-
-//   models.users
-//     .update(users)
-//     .then(([result]) => {
-//       if (result.affectedRows === 0) {
-//         res.sendStatus(404);
-//       } else {
-//         res.sendStatus(204);
-//       }
-//     })
-//     .catch((err) => {
-//       console.error(err);
-//       res.sendStatus(500);
-//     });
-// };
-
 const edit = async (req, res) => {
   const { email, password, firstname, lastname, city, login } = req.body;
 
