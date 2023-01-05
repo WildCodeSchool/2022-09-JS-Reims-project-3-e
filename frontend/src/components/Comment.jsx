@@ -3,7 +3,7 @@ import submit from "../assets/submit.png";
 
 function Comment() {
   return (
-    <div className="comments">
+    <div className="commentsofuser">
       <input
         className="textcomment"
         forHtml="textcomment"
