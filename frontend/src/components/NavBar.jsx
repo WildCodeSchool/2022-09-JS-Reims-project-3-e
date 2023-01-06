@@ -8,21 +8,21 @@ function NavBar() {
     <nav className="navbar">
       <ul className="list">
         <li className="listbutton">
-          <button className="button" type="button">
+          <button className="buton" type="button">
             <Link to="/">
               <img className="imagenavbar" src={home} alt="home" />
             </Link>
           </button>
         </li>
         <li className="listbutton">
-          <button className="button" type="button">
+          <button className="buton" type="button">
             <Link to="/menu">
               <img className="imagenavbarmenu" src={menu} alt="home" />
             </Link>
           </button>
         </li>
         <li className="listbutton">
-          <button className="button" type="button">
+          <button className="buton" type="button">
             <Link to="/profil">
               <img className="imagenavbar" src={user} alt="home" />
             </Link>
