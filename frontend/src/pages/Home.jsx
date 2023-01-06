@@ -8,7 +8,7 @@ function Home() {
   useEffect(() => {
     fetch(
       `${
-        import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000"
+        import.meta.env.VITE_BACKEND_URL ?? "http://localhost:8080"
       }/communication-plans`
     )
       .then((response) => response.json())

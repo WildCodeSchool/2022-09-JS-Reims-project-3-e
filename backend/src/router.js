@@ -19,7 +19,7 @@ const articles = [
   {
     title: "Title",
     content: "Content",
-    image_url: "https://picsum.photos/200/300",
+    image_url: "Image URL",
   },
 ];
 
