@@ -104,7 +104,7 @@ const login = async (req, res) => {
         const token = jwt.sign(payload, process.env.JWT_SECRET, {
           expiresIn: "1h",
         });
-        res.send({ token });
+        res.send({ token, id: users[0].id });
       } else {
         res.sendStatus(401);
       }
