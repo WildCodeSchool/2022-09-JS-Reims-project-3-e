@@ -4,7 +4,7 @@ import Like from "./Like";
 import buttonedited from "../assets/buttonedited.png";
 import comment from "../assets/comment.png";
 import heart from "../assets/heart.png";
-
+import Comment from "./Comment";
 import CommunicationPlanCard from "./CommunicationPlanCard";
 import "./NewsFeed.css";
 
@@ -81,6 +81,7 @@ function NewsFeed({ communicationPlans }) {
             </div>
           </div>
         </div>
+        <Comment />
       </article>
       <article className="article">
         <div className="profil">
