@@ -45,6 +45,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
@@ -72,6 +73,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
@@ -99,6 +101,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
@@ -126,6 +129,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
@@ -153,6 +157,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );

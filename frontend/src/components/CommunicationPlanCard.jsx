@@ -15,7 +15,6 @@ export default function CommunicationPlanCard({
           src="https://media-exp1.licdn.com/dms/image/D4E03AQEKkzhQP5r5lg/profile-displayphoto-shrink_800_800/0/1670411909070?e=1675900800&v=beta&t=QJDauJPYN2CGqSL-Ky0sPjnN9w09IyXjWoivLOlFQKg"
           alt="Avatar Profil"
         />
-        <p>John Doe</p>
       </div>
       <img className="imageurl" src={imageUrl} alt="imageurl" />
       <h1>{title}</h1>
