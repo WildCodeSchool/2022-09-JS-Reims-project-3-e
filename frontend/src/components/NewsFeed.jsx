@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Like from "./Like";
-import buttonedited from "../assets/buttonedited.png";
 
 import CommunicationPlanCard from "./CommunicationPlanCard";
 import "./NewsFeed.css";
@@ -11,28 +10,12 @@ function NewsFeed({ communicationPlans }) {
     <section className="content">
       <article className="article">
         <div className="profil">
-          <div className="userprofil">
-            <img
-              className="imageprofil"
-              src="https://media-exp1.licdn.com/dms/image/D4E03AQEKkzhQP5r5lg/profile-displayphoto-shrink_800_800/0/1670411909070?e=1675900800&v=beta&t=QJDauJPYN2CGqSL-Ky0sPjnN9w09IyXjWoivLOlFQKg"
-              alt="Avatar Profil"
-            />
-            <div className="nameuser">
-              <p>Simon B</p>
-              <div className="cityandcompany">
-                <p>Reims</p>
-                <p>WCS</p>
-              </div>
-            </div>
-          </div>
-          <div className="userparameter">
-            <p className="dateofpublish">5 jours</p>
-            <img
-              className="buttonedited"
-              src={buttonedited}
-              alt="icon edited and remove"
-            />
-          </div>
+          <img
+            className="imageprofil"
+            src="https://media-exp1.licdn.com/dms/image/D4E03AQEKkzhQP5r5lg/profile-displayphoto-shrink_800_800/0/1670411909070?e=1675900800&v=beta&t=QJDauJPYN2CGqSL-Ky0sPjnN9w09IyXjWoivLOlFQKg"
+            alt="Avatar Profil"
+          />
+          <p>Simon B</p>
         </div>
         <img
           className="imagecontent"
@@ -165,16 +148,6 @@ function NewsFeed({ communicationPlans }) {
         </div>
         <Like isFavorite={false} />
       </article>
-      {communicationPlans.map((communicationPlan) => {
-        return (
-          <CommunicationPlanCard
-            title={communicationPlan.title}
-            content={communicationPlan.content}
-            image_url={communicationPlan.image_url}
-            key={communicationPlan.title}
-          />
-        );
-      })}
     </section>
   );
 }
@@ -184,7 +157,6 @@ NewsFeed.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
-      image_url: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
 };
