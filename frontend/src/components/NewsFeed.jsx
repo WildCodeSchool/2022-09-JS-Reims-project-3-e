@@ -1,10 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Like from "./Like";
-import buttonedited from "../assets/buttonedited.png";
-import comment from "../assets/comment.png";
-import heart from "../assets/heart.png";
-import Comment from "./Comment";
+
 import CommunicationPlanCard from "./CommunicationPlanCard";
 import "./NewsFeed.css";
 
@@ -13,28 +10,12 @@ function NewsFeed({ communicationPlans }) {
     <section className="content">
       <article className="article">
         <div className="profil">
-          <div className="userprofil">
-            <img
-              className="imageprofil"
-              src="https://media-exp1.licdn.com/dms/image/D4E03AQEKkzhQP5r5lg/profile-displayphoto-shrink_800_800/0/1670411909070?e=1675900800&v=beta&t=QJDauJPYN2CGqSL-Ky0sPjnN9w09IyXjWoivLOlFQKg"
-              alt="Avatar Profil"
-            />
-            <div className="nameuser">
-              <p>Simon B</p>
-              <div className="cityandcompany">
-                <p>Reims</p>
-                <p>WCS</p>
-              </div>
-            </div>
-          </div>
-          <div className="userparameter">
-            <p className="dateofpublish">5 jours</p>
-            <img
-              className="buttonedited"
-              src={buttonedited}
-              alt="icon edited and remove"
-            />
-          </div>
+          <img
+            className="imageprofil"
+            src="https://media-exp1.licdn.com/dms/image/D4E03AQEKkzhQP5r5lg/profile-displayphoto-shrink_800_800/0/1670411909070?e=1675900800&v=beta&t=QJDauJPYN2CGqSL-Ky0sPjnN9w09IyXjWoivLOlFQKg"
+            alt="Avatar Profil"
+          />
+          <p>Simon B</p>
         </div>
         <img
           className="imagecontent"
@@ -47,41 +28,13 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
           })}
         </div>
-        <div className="contentofpublication">
-          <h1 className="titlecontent">
-            Enedis constate une baisse historique de 20% de la consommation
-            électrique de l'éclairage public
-          </h1>
-          <p className="descriptioncontent">
-            Au cours des 15 premiers jours de décembre 2022, Enedis constate une
-            baisse historique de 20% de la consommation de l'éclairage public en
-            France. Alors que chacun cherche les leviers de sobriété, les
-            collectivités mettent en oeuvre celui de l'éclairage public, qui
-            représente plus de 40% de leur consommation électrique annuelle.
-          </p>
-        </div>
-        <div className="buttonlikeandcomment">
-          <div className="likeandcount">
-            <p className="numberoflike"> 4 </p>
-            <img src={heart} className="countoflike" alt="countoflike" />
-          </div>
-          <div className="buttonlikeandcomments">
-            <div className="likes">
-              <Like isFavorite={false} />
-              <p className="styleoflike">J'aime</p>
-            </div>
-            <div className="comments">
-              <img className="comment" src={comment} alt="comment" />
-              <p className="styleofcomment">Je commente</p>
-            </div>
-          </div>
-        </div>
-        <Comment />
+        <Like isFavorite={false} />
       </article>
       <article className="article">
         <div className="profil">
@@ -103,6 +56,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
@@ -130,6 +84,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
@@ -157,6 +112,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
@@ -184,6 +140,7 @@ function NewsFeed({ communicationPlans }) {
               <CommunicationPlanCard
                 title={communicationPlan.title}
                 content={communicationPlan.content}
+                image_url={communicationPlan.image_url}
                 key={communicationPlan.title}
               />
             );
@@ -191,16 +148,6 @@ function NewsFeed({ communicationPlans }) {
         </div>
         <Like isFavorite={false} />
       </article>
-      {communicationPlans.map((communicationPlan) => {
-        return (
-          <CommunicationPlanCard
-            title={communicationPlan.title}
-            content={communicationPlan.content}
-            image_url={communicationPlan.image_url}
-            key={communicationPlan.title}
-          />
-        );
-      })}
     </section>
   );
 }
@@ -210,7 +157,6 @@ NewsFeed.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
-      image_url: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
 };
