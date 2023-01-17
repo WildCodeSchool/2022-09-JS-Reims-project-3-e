@@ -31,14 +31,7 @@ const read = (req, res) => {
 };
 
 const edit = (req, res) => {
-  const { firstname, lastname, city, login } = req.body;
-
-  const user = {
-    firstname,
-    lastname,
-    city,
-    login,
-  };
+  const user = req.body;
 
   // TODO validations (length, format...)
 
@@ -111,7 +104,7 @@ const login = async (req, res) => {
         const token = jwt.sign(payload, process.env.JWT_SECRET, {
           expiresIn: "1h",
         });
-        res.send({ token });
+        res.send({ token, id: users[0].id });
       } else {
         res.sendStatus(401);
       }
