@@ -1,54 +1,62 @@
 .profile {
   margin: 30px 50px;
-  padding: 50px;
-  height: 80vh;
+  padding: 10px;
+
   box-sizing: border-box;
+  border: 1px solid red;
 }
 .profile div {
-  margin: 20px 0;
+  margin: 20px;
 }
-.profile h2 {
+.profile h2,
+.profile div h1 {
   text-align: center;
 }
-
 .profile .profile-section {
   display: flex;
-  gap: 20px;
-}
-.profile .profile-section img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  border: 1px blue solid;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 100%;
+  margin: 0;
 }
 .profile .profile-section div {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  font-size: 1.2rem;
+  margin: 5px 20px;
 }
+.profile .profile-section img {
+  height: 100px;
+  border-radius: 20%;
+}
+
+.profile .change {
+  display: flex;
+  margin: 5px;
+}
+.profile .btn-modify,
+.profile .btn-confirm {
+  width: 100px;
+  background-color: #a0d24b;
+  border: #a0d24b;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: white;
+}
+.profile .btn-modify {
+  margin-left: auto;
+}
+
 .profile form {
   display: flex;
   flex-direction: column;
 }
-
 .profile form input {
-  max-width: 80%;
-}
-
-.profile form label {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.profile form input {
+  margin: 10px 0;
+  padding: 5px;
   border-radius: 5px;
-  padding: 3px;
-  border: 1px solid black;
-  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
 }
-
-.profile button {
-  width: inherit;
-  width: 60%;
+.profile form label {
+  margin: 10px 0;
 }

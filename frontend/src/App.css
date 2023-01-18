@@ -9,4 +9,11 @@
 }
 .log-page > button {
   margin: auto;
+  font: inherit;
+  cursor: pointer;
+  background: #a0d24b;
+  color: white;
+  border: 1px solid #a0d24b;
+  border-radius: 6px;
+  padding: 0.5rem 2rem;
 }
