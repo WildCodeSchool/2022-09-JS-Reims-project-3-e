@@ -51,7 +51,7 @@ function NewsFeed({ communicationPlans }) {
               />
             );
           })}
-        </div>{" "}
+        </div>
         */
         <div className="contentofpublication">
           <h1 className="titlecontent">
