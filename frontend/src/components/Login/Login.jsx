@@ -51,7 +51,9 @@ export default function Login() {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8080/api/login", {
+    const url = import.meta.env.VITE_BACKEND_URL;
+
+    fetch(`${url}/api/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
