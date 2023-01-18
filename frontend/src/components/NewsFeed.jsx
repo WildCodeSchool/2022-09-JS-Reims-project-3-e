@@ -52,7 +52,6 @@ function NewsFeed({ communicationPlans }) {
             );
           })}
         </div>
-        */
         <div className="contentofpublication">
           <h1 className="titlecontent">
             Enedis constate une baisse historique de 20% de la consommation
