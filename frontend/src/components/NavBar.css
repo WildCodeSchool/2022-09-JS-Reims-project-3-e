@@ -7,8 +7,9 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  position: sticky;
+  position: absolute;
   bottom: 0;
+  width: 100%;
 }
 .list {
   display: flex;

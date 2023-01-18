@@ -102,9 +102,15 @@ function Profile() {
           </p>
         </div>
       </div>
-      <button type="button" onClick={() => setIsFormActive((prev) => !prev)}>
-        {isFormActive ? "Fermer" : "Modifier"}
-      </button>
+      <div className={classes.change}>
+        <button
+          className={classes["btn-modify"]}
+          type="button"
+          onClick={() => setIsFormActive((prev) => !prev)}
+        >
+          {isFormActive ? "Fermer" : "Modifier"}
+        </button>
+      </div>
       {errorMessage && <p>{errorMessage}</p>}
       {isFormActive && (
         <form onSubmit={submitHandler}>
@@ -136,7 +142,9 @@ function Profile() {
             value={user.city}
             onChange={cityChangeHandler}
           />
-          <button type="submit">Confirmer</button>
+          <button className={classes["btn-confirm"]} type="submit">
+            Confirmer
+          </button>
         </form>
       )}
     </Card>

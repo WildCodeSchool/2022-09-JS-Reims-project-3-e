@@ -36,13 +36,7 @@
 .imagecontent {
   padding: 2rem 2rem 0rem 2rem;
 }
-button {
-  width: 24px;
-  height: 24px;
-  margin: 0;
-  background-size: 100%;
-  padding: 0;
-}
+
 .isFavorite {
   background-color: white;
   border: none;
