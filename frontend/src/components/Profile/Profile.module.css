@@ -1,9 +1,7 @@
 .profile {
   margin: 30px 50px;
   padding: 10px;
-
   box-sizing: border-box;
-  border: 1px solid red;
 }
 .profile div {
   margin: 20px;
@@ -45,10 +43,24 @@
 .profile .btn-modify {
   margin-left: auto;
 }
-
+.profile .btn-confirm {
+  margin: auto;
+}
 .profile form {
   display: flex;
   flex-direction: column;
+}
+.profile form section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile form section div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.profile form section label {
+  margin: 0;
 }
 .profile form input {
   margin: 10px 0;
