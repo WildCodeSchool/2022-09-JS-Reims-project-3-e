@@ -114,34 +114,44 @@ function Profile() {
       {errorMessage && <p>{errorMessage}</p>}
       {isFormActive && (
         <form onSubmit={submitHandler}>
-          <label htmlFor="firstname">Prénom</label>
-          <input
-            type="text"
-            id="firstname"
-            value={user.firstname}
-            onChange={firstnameChangeHandler}
-          />
-          <label htmlFor="lastname">Nom</label>
-          <input
-            type="text"
-            id="lastname"
-            value={user.lastname}
-            onChange={lastnameChangeHandler}
-          />
-          <label htmlFor="login">Nom d'utilisateur</label>
-          <input
-            type="text"
-            id="login"
-            value={user.login}
-            onChange={loginChangeHandler}
-          />
-          <label htmlFor="city">Ville</label>
-          <input
-            type="text"
-            id="city"
-            value={user.city}
-            onChange={cityChangeHandler}
-          />
+          <section>
+            <div>
+              <label htmlFor="firstname">Prénom</label>
+              <input
+                type="text"
+                id="firstname"
+                value={user.firstname}
+                onChange={firstnameChangeHandler}
+              />
+            </div>
+            <div>
+              <label htmlFor="lastname">Nom</label>
+              <input
+                type="text"
+                id="lastname"
+                value={user.lastname}
+                onChange={lastnameChangeHandler}
+              />
+            </div>
+            <div>
+              <label htmlFor="login">Nom d'utilisateur</label>
+              <input
+                type="text"
+                id="login"
+                value={user.login}
+                onChange={loginChangeHandler}
+              />
+            </div>
+            <div>
+              <label htmlFor="city">Ville</label>
+              <input
+                type="text"
+                id="city"
+                value={user.city}
+                onChange={cityChangeHandler}
+              />
+            </div>
+          </section>
           <button className={classes["btn-confirm"]} type="submit">
             Confirmer
           </button>
