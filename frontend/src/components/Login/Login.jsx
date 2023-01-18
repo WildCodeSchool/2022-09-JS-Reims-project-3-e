@@ -71,6 +71,9 @@ export default function Login() {
             setError(true);
           }, 500);
         }
+      })
+      .catch(() => {
+        setError(true);
       });
   };
 
