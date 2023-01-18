@@ -98,7 +98,8 @@ export default function Signup({ onRes }) {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    fetch("http://localhost:5000/users", {
+    const url = import.meta.env.VITE_BACKEND_URL;
+    fetch(`${url}/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -153,7 +154,7 @@ export default function Signup({ onRes }) {
         >
           <label htmlFor="firstname">Prenom</label>
           <input
-            type="firstname"
+            type="text"
             id="firstname"
             value={firstnameState.value}
             onChange={firstnameChangeHandler}
@@ -167,7 +168,7 @@ export default function Signup({ onRes }) {
         >
           <label htmlFor="lastname">Nom</label>
           <input
-            type="lastname"
+            type="text"
             id="lastname"
             value={lastnameState.value}
             onChange={lastnameChangeHandler}
@@ -181,7 +182,7 @@ export default function Signup({ onRes }) {
         >
           <label htmlFor="login">Nom d'utilisateur</label>
           <input
-            type="login"
+            type="text"
             id="login"
             value={usernameState.value}
             onChange={usernameChangeHandler}
@@ -195,7 +196,7 @@ export default function Signup({ onRes }) {
         >
           <label htmlFor="city">Ville</label>
           <input
-            type="city"
+            type="text"
             id="city"
             value={cityState.value}
             onChange={cityChangeHandler}
