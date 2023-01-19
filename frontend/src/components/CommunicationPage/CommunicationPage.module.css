@@ -1,0 +1,88 @@
+.article {
+  display: flex;
+  margin: 30px;
+  min-width: 300px;
+  max-width: 1000px;
+  left: 50%;
+}
+.article .content {
+  width: 100%;
+}
+
+.article .content .header {
+  display: flex;
+  color: white;
+  height: 60px;
+  padding: 20px;
+  gap: 10px;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(51, 95, 232, 1) 0%,
+    rgba(4, 31, 98, 0.9872) 100%
+  );
+
+  border-radius: 10px 10px 0 0px;
+}
+
+.article .content .header .avatar {
+  height: 50px;
+  border-radius: 50px;
+}
+
+.article .content .info {
+  padding: 20px;
+}
+.article .content .actions {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    90deg,
+    rgba(51, 95, 232, 1) 0%,
+    rgba(4, 31, 98, 0.9872) 100%
+  );
+}
+
+.article .content .actions > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 0 0 0 10px;
+}
+
+.article .content .actions > div:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.article .content .actions > div:first-child {
+  border-radius: 0 0 10px 0;
+}
+
+.article .content .actions > div:first-child:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.article .content .actions .like-btn {
+  display: flex;
+  color: white;
+}
+.article .content .actions button {
+  background: transparent;
+  height: 40px;
+  border: none;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.article .content .actions .like-btn .like {
+  height: 40px;
+}
