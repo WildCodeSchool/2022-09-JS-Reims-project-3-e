@@ -1,0 +1,13 @@
+.create-pdc {
+  margin: 30px;
+  padding: 20px;
+}
+
+.create-pdc h2 {
+  text-align: center;
+}
+
+.create-pdc form div {
+  display: flex;
+  flex-direction: column;
+}

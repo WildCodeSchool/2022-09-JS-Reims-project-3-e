@@ -7,8 +7,8 @@ class CommunicationPlanManager extends AbstractManager {
 
   insert(article) {
     return this.connection.query(
-      `insert into ${this.table} (title) values (?)`,
-      [article.title]
+      `insert into ${this.table} (title, content) values (?, ?)`,
+      [article.title, article.content]
     );
   }
 
