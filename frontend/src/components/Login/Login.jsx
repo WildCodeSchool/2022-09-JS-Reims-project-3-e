@@ -11,6 +11,10 @@ import { UserContext } from "../../store/user-context";
 export default function Login() {
   const { setToken } = useContext(UserContext);
   const { setId } = useContext(UserContext);
+  const { setCity } = useContext(UserContext);
+  const { setFirstname } = useContext(UserContext);
+  const { setLastname } = useContext(UserContext);
+  const { setAdmin } = useContext(UserContext);
   const [error, setError] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
 
@@ -68,6 +72,10 @@ export default function Login() {
         if (data.token) {
           setToken(data.token);
           setId(data.id);
+          setCity(data.city);
+          setFirstname(data.firstname);
+          setLastname(data.lastname);
+          setAdmin(data.admin);
         } else {
           setTimeout(() => {
             setError(true);
