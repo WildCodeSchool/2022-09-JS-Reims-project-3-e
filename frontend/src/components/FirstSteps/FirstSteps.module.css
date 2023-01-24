@@ -1,0 +1,29 @@
+.first-steps {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.first-steps header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.first-steps img {
+  width: 20px;
+}
+
+.first-steps section {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.first-steps section label {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: auto;
+  gap: 10px;
+}
+
+.first-steps section progress {
+  width: 100%;
+  height: 20px;
+}
