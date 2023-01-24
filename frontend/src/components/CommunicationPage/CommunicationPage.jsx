@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classes from "./CommunicationPage.module.css";
 import Card from "../../UI/Card";
 import defaultAvatar from "../../assets/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg";
 import like from "../../assets/heart.png";
+import paperPlane from "../../assets/paper-plane.png";
+import commentBubble from "../../assets/chat-bubble.png";
+import enedisLogo from "../../assets/enedis-logo.png";
 
 function CommunicationPage({
   firstname,
@@ -12,11 +16,13 @@ function CommunicationPage({
   content,
   avatar,
   city,
+  image,
+  id,
 }) {
   return (
     <Card classNames={classes.article}>
-      <div className={classes.content}>
-        <div className={classes.header}>
+      <div className={classes.header}>
+        <div>
           <img
             className={classes.avatar}
             src={avatar}
@@ -25,7 +31,7 @@ function CommunicationPage({
               e.currentTarget.src = defaultAvatar;
             }}
           />
-          <div>
+          <div className={classes["header-text"]}>
             <h3>
               {(firstname, lastname)
                 ? `${firstname} ${lastname}`
@@ -34,26 +40,42 @@ function CommunicationPage({
             <p>{city || "Ville"}</p>
           </div>
         </div>
-        <div className={classes.info}>
-          <h2>{title}</h2>
-          <p>{content}</p>
+        <div className={classes.date}>
+          <p>5 jours</p>
         </div>
-        <div className={classes.actions}>
+      </div>
+      <div className={classes.content}>
+        <h3>{title}</h3>
+        <p>{content}</p>
+        <img
+          className={classes["content-cover"]}
+          src={image || enedisLogo}
+          alt="enedis-logo"
+        />
+        <div className={classes.interaction}>
           <div>
-            <p>Commentaires: 0</p>
+            <p>0</p>
+            <img src={like} alt="like" />
           </div>
           <div>
-            <button className={classes["like-btn"]} type="button">
-              <img src={like} className={classes.like} alt="like" />
-              <p>: 0</p>
+            <p>0</p>
+            <img src={commentBubble} alt="comment-bubble" />
+          </div>
+          <div>
+            <button type="button">
+              <img src={like} alt="like" />
+              J'aime
             </button>
           </div>
-          <div>
-            <button type="button" className={classes.button}>
-              Répondre
-            </button>
-          </div>
         </div>
+      </div>
+      <div className={classes.actions}>
+        <Link to={`/articles/${id}`}>
+          <input type="text" placeholder="Commenter" />
+          <button type="button">
+            <img src={paperPlane} alt="paper-plane" />
+          </button>
+        </Link>
       </div>
     </Card>
   );
@@ -66,6 +88,8 @@ CommunicationPage.propTypes = {
   firstname: PropTypes.string,
   lastname: PropTypes.string,
   city: PropTypes.string,
+  image: PropTypes.string,
+  id: PropTypes.number.isRequired,
 };
 
 CommunicationPage.defaultProps = {
@@ -73,6 +97,7 @@ CommunicationPage.defaultProps = {
   firstname: "Utilisateur",
   lastname: "",
   city: "Ville",
+  image: enedisLogo,
 };
 
 export default CommunicationPage;

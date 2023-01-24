@@ -77,87 +77,92 @@ function Profile() {
     return <div>Loading...</div>;
   }
   return (
-    <Card classNames={classes.profile}>
-      <div>
-        <h1>
-          {`Bienvenue,
-          ${firstname} ${lastname}`}
-        </h1>
-      </div>
-      <h2>Mes infos</h2>
-      <div className={classes["profile-section"]}>
-        <img src={userPic} alt="user" />
+    <>
+      <Card classNames={classes.profile}>
         <div>
-          <p>
-            <strong>Prénom:</strong> {firstname}
-          </p>
-          <p>
-            <strong>Nom:</strong> {lastname}
-          </p>
-          <p>
-            <strong>Login:</strong> {login}
-          </p>
-          <p>
-            <strong>Ville:</strong> {city}
-          </p>
+          <h1>
+            {`Bienvenue,
+          ${firstname} ${lastname}`}
+          </h1>
         </div>
-      </div>
-      <div className={classes.change}>
-        <button
-          className={classes["btn-modify"]}
-          type="button"
-          onClick={() => setIsFormActive((prev) => !prev)}
-        >
-          {isFormActive ? "Fermer" : "Modifier"}
-        </button>
-      </div>
+        <h2>Mes infos</h2>
+        <div className={classes["profile-section"]}>
+          <img src={userPic} alt="user" />
+          <div>
+            <p>
+              <strong>Prénom:</strong> {firstname}
+            </p>
+            <p>
+              <strong>Nom:</strong> {lastname}
+            </p>
+            <p>
+              <strong>Login:</strong> {login}
+            </p>
+            <p>
+              <strong>Ville:</strong> {city}
+            </p>
+          </div>
+        </div>
+        <div className={classes.change}>
+          <button
+            className={classes["btn-modify"]}
+            type="button"
+            onClick={() => setIsFormActive((prev) => !prev)}
+          >
+            {isFormActive ? "Fermer" : "Modifier"}
+          </button>
+        </div>
+      </Card>
       {errorMessage && <p>{errorMessage}</p>}
       {isFormActive && (
-        <form onSubmit={submitHandler}>
-          <section>
-            <div>
-              <label htmlFor="firstname">Prénom</label>
-              <input
-                type="text"
-                id="firstname"
-                value={user.firstname}
-                onChange={firstnameChangeHandler}
-              />
-            </div>
-            <div>
-              <label htmlFor="lastname">Nom</label>
-              <input
-                type="text"
-                id="lastname"
-                value={user.lastname}
-                onChange={lastnameChangeHandler}
-              />
-            </div>
-            <div>
-              <label htmlFor="login">Nom d'utilisateur</label>
-              <input
-                type="text"
-                id="login"
-                value={user.login}
-                onChange={loginChangeHandler}
-              />
-            </div>
-            <div>
-              <label htmlFor="city">Ville</label>
-              <input
-                type="text"
-                id="city"
-                value={user.city}
-                onChange={cityChangeHandler}
-              />
-            </div>
-          </section>
-          <button className={classes["btn-confirm"]} type="submit">
-            Confirmer
-          </button>
-        </form>
+        <Card classNames={classes["modify-section"]}>
+          <h3>Modifier mes infos</h3>
+          <form onSubmit={submitHandler}>
+            <section>
+              <div>
+                <label htmlFor="firstname">Prénom</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  value={user.firstname}
+                  onChange={firstnameChangeHandler}
+                />
+              </div>
+              <div>
+                <label htmlFor="lastname">Nom</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  value={user.lastname}
+                  onChange={lastnameChangeHandler}
+                />
+              </div>
+              <div>
+                <label htmlFor="login">Nom d'utilisateur</label>
+                <input
+                  type="text"
+                  id="login"
+                  value={user.login}
+                  onChange={loginChangeHandler}
+                />
+              </div>
+              <div>
+                <label htmlFor="city">Ville</label>
+                <input
+                  type="text"
+                  id="city"
+                  value={user.city}
+                  onChange={cityChangeHandler}
+                />
+              </div>
+            </section>
+            <button className={classes["btn-confirm"]} type="submit">
+              Confirmer
+            </button>
+          </form>
+        </Card>
       )}
-    </Card>
+    </>
   );
 }
 
