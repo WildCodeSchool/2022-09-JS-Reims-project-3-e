@@ -1,0 +1,45 @@
+.members {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.members .members-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.members .members-header img {
+  width: 25px;
+}
+
+.members .members-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+  justify-content: space-around;
+}
+.members .members-section .member-card img {
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid gray;
+}
+.members .actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.members .actions button {
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  background-color: #fff;
+  color: rgb(75, 172, 230);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.members .actions button:hover {
+  background-color: rgb(75, 172, 230);
+  color: #fff;
+}
