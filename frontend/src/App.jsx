@@ -4,7 +4,6 @@ import "./components/NavBar.css";
 import Signup from "./components/Signup/Signup";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
-import Home from "./pages/Home";
 import Menu from "./components/Menu";
 
 import Login from "./components/Login/Login";
@@ -12,6 +11,7 @@ import { UserContext } from "./store/user-context";
 import Profile from "./components/Profile/Profile";
 
 import "./App.css";
+import Main from "./pages/Main";
 
 function App() {
   const { token } = useContext(UserContext);
@@ -36,7 +36,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Main />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/profil" element={<Profile />} />
       </Routes>
