@@ -87,5 +87,5 @@ VALUES
 
 CREATE TABLE commentaries (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-     content varchar(255) NOT NULL,
+    content varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
