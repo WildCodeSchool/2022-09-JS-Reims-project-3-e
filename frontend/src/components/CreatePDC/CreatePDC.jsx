@@ -1,17 +1,29 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import propTypes from "prop-types";
 import classes from "./CreatePDC.module.css";
 import Card from "../../UI/Card";
 
+import defaultProfilePic from "../../assets/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg";
+
 function CreatePDC({ onSave }) {
   const titleRef = useRef("");
   const contentRef = useRef("");
+  const [disabled, setDisabled] = useState(true);
+
+  const titleChangeHandler = (event) => {
+    const title = event.target.value;
+    if (title.trim().length > 5) {
+      setDisabled(false);
+    }
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
     const title = titleRef.current.value;
     const content = contentRef.current.value;
+    // eslint-disable-next-line camelcase
+
     onSave(title, content);
     titleRef.current.value = "";
     contentRef.current.value = "";
@@ -19,17 +31,22 @@ function CreatePDC({ onSave }) {
 
   return (
     <Card classNames={classes["create-pdc"]}>
-      <h2>Ajouter un PDC</h2>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} disabled>
         <div>
-          <label htmlFor="title">Title</label>
-          <input type="text" id="title" ref={titleRef} />
+          <img src={defaultProfilePic} alt="profile-pic" />
+          <input
+            type="text"
+            ref={titleRef}
+            placeholder="Titre de votre publication"
+            onChange={titleChangeHandler}
+          />
         </div>
         <div>
-          <label htmlFor="content">Content</label>
-          <textarea id="content" ref={contentRef} />
+          <textarea ref={contentRef} placeholder="Texte de votre publication" />
         </div>
-        <button type="submit">Ajouter</button>
+        <button disabled={disabled} type="submit">
+          Ajouter
+        </button>
       </form>
     </Card>
   );

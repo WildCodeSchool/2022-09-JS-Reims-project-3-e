@@ -1,13 +1,58 @@
 .create-pdc {
-  margin: 30px;
-  padding: 20px;
+  margin: 0 50px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-
-.create-pdc h2 {
-  text-align: center;
-}
-
-.create-pdc form div {
+.create-pdc form {
   display: flex;
   flex-direction: column;
+}
+.create-pdc form div {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 5px;
+}
+.create-pdc form input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid gray;
+  border-radius: 50px;
+}
+.create-pdc form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid gray;
+  border-radius: 50px;
+  margin-left: 60px;
+}
+
+.create-pdc form div img {
+  width: 40px;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+.create-pdc form button {
+  /*   small centered button */
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  background-color: #fff;
+  color: rgb(75, 172, 230);
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto;
+  justify-self: center;
+}
+.create-pdc form button:disabled {
+  background-color: lightgray;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.create-pdc form button:hover {
+  background-color: rgb(75, 172, 230);
+  color: #fff;
 }
