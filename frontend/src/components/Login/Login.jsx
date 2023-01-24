@@ -9,12 +9,9 @@ import { emailReducer, passwordReducer } from "./loginHelpers";
 import { UserContext } from "../../store/user-context";
 
 export default function Login() {
-  const { setToken } = useContext(UserContext);
-  const { setId } = useContext(UserContext);
-  const { setCity } = useContext(UserContext);
-  const { setFirstname } = useContext(UserContext);
-  const { setLastname } = useContext(UserContext);
-  const { setAdmin } = useContext(UserContext);
+  const { setToken, setId, setCity, setFirstname, setLastname, setAdmin } =
+    useContext(UserContext);
+
   const [error, setError] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
 
