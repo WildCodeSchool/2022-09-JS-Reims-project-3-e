@@ -1,0 +1,40 @@
+.activity {
+    padding: 10px;
+  }
+  .activity section {
+    padding: 15px;
+    height: 300px;
+    overflow-y: scroll;
+  }
+  
+  .activity section div {
+    display: flex;
+    padding: 10px;
+  }
+  
+  .activity section div img {
+    width: 50px;
+    border-radius: 50px;
+  }
+  
+  .activity section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .activity header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .activity header img {
+    width: 20px;
+    border-radius: 50px;
+  }
+  
+  .activity section div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
