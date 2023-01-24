@@ -25,6 +25,6 @@ router.delete("/users/:id", usersControllers.destroy);
 
 router.get("/commentaries", commentariesControllers.browse);
 router.get("/commentaries", commentariesControllers.read);
-router.get("/commentaries", commentariesControllers.edit);
+router.post("/commentaries", commentariesControllers.add);
 
 module.exports = router;
