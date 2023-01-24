@@ -22,7 +22,7 @@ class UsersManager extends AbstractManager {
 
   verifyEmailAndPasswordAndNext(email) {
     return this.connection.query(
-      `select id, hashedPassword from ${this.table} where email = ?`,
+      `select id, firstname, lastname, admin, city, hashedPassword from ${this.table} where email = ?`,
       [email]
     );
   }

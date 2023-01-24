@@ -2,7 +2,7 @@ const models = require("../models");
 
 const browse = (req, res) => {
   models.communication_plans
-    .findAll()
+    .getArticlesWithAuthor()
     .then(([rows]) => {
       res.send(rows);
     })
@@ -52,7 +52,6 @@ const edit = (req, res) => {
 
 const add = (req, res) => {
   const article = req.body;
-
   // TODO validations (length, format...)
 
   models.communication_plans
