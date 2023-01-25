@@ -89,3 +89,10 @@ CREATE TABLE comments (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     contentcomment varchar(560) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+INSERT INTO comments (id, contentcomment)
+VALUES
+  (
+    1,
+    "Merci pour l'information !"
+  );
