@@ -2,13 +2,13 @@ const AbstractManager = require("./AbstractManager");
 
 class UsersManager extends AbstractManager {
   constructor() {
-    super({ table: "commentaries" });
+    super({ table: "comments" });
   }
 
-  insert(commentary) {
+  insert(comment) {
     return this.connection.query(
-      `insert into ${this.table} ( content ) values (?)`,
-      [commentary.content]
+      `insert into ${this.table} ( contentcomment ) values (?)`,
+      [comment.contentcomment]
     );
   }
 }

@@ -1,7 +1,7 @@
 const models = require("../models");
 
 const browse = (req, res) => {
-  models.commentaries
+  models.comments
     .findAll()
     .then(([rows]) => {
       res.send(rows);
@@ -13,7 +13,7 @@ const browse = (req, res) => {
 };
 
 const read = (req, res) => {
-  models.commentaries
+  models.comments
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -29,14 +29,14 @@ const read = (req, res) => {
 };
 
 const edit = (req, res) => {
-  const commentary = req.body;
+  const comment = req.body;
 
   // TODO validations (length, format...)
 
-  commentary.id = parseInt(req.params.id, 10);
+  comment.id = parseInt(req.params.id, 10);
 
-  models.commentaries
-    .update(commentary)
+  models.comments
+    .update(comment)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
@@ -51,14 +51,14 @@ const edit = (req, res) => {
 };
 
 const add = (req, res) => {
-  const commentary = req.body;
+  const comment = req.body;
 
   // TODO validations (length, format...)
 
-  models.commentaries
-    .insert(commentary)
+  models.comments
+    .insert(comment)
     .then(([result]) => {
-      res.location(`/commentaries/${result.insertId}`).sendStatus(201);
+      res.location(`/comments/${result.insertId}`).sendStatus(201);
     })
     .catch((err) => {
       console.error(err);
@@ -67,7 +67,7 @@ const add = (req, res) => {
 };
 
 const destroy = (req, res) => {
-  models.commentaries
+  models.comments
     .delete(req.params.id)
     .then(([result]) => {
       if (result.affectedRows === 0) {
