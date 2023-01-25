@@ -85,7 +85,15 @@ VALUES
   ("Passer à l’action", 
   "Après avoir établi le plan de communication à l’aide d’un tableau, il est temps de passer à l’action en déterminant le rôle de chaque collaborateur dans l’exécution du mandat, en créant les différents supports de communication, toujours en adaptant le message selon les canaux", '1');
 
-CREATE TABLE commentaries (
+CREATE TABLE comments (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    content varchar(255) NOT NULL
+    contentcomment varchar(560) NOT NULL,
+    fk_author_id INT NOT NULL,
+    FOREIGN KEY (fk_author_id) REFERENCES users(id )
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+INSERT INTO comments (contentcomment, fk_author_id )
+VALUES
+  (
+    "Merci pour l'information !",'1'
+  );

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classes from "./CommunicationPage.module.css";
 import Card from "../../UI/Card";
@@ -17,7 +16,6 @@ function CommunicationPage({
   avatar,
   city,
   image,
-  id,
 }) {
   return (
     <Card classNames={classes.article}>
@@ -70,12 +68,10 @@ function CommunicationPage({
         </div>
       </div>
       <div className={classes.actions}>
-        <Link to={`/articles/${id}`}>
-          <input type="text" placeholder="Commenter" />
-          <button type="button">
-            <img src={paperPlane} alt="paper-plane" />
-          </button>
-        </Link>
+        <input type="text" placeholder="Commenter" />
+        <button type="button">
+          <img src={paperPlane} alt="paper-plane" />
+        </button>
       </div>
     </Card>
   );
@@ -89,7 +85,6 @@ CommunicationPage.propTypes = {
   lastname: PropTypes.string,
   city: PropTypes.string,
   image: PropTypes.string,
-  id: PropTypes.number.isRequired,
 };
 
 CommunicationPage.defaultProps = {

@@ -5,7 +5,7 @@ const router = express.Router();
 const communicationPlansControllers = require("./controllers/communicationPlansControllers");
 const { hashPassword } = require("./auth");
 const usersControllers = require("./controllers/userControllers");
-const commentariesControllers = require("./controllers/commentariesControllers");
+const commentControllers = require("./controllers/commentControllers");
 
 router.get("/communication-plans", communicationPlansControllers.browse);
 router.get("/communication-plans/:id", communicationPlansControllers.read);
@@ -23,8 +23,8 @@ router.post("/users/", hashPassword, usersControllers.add);
 router.put("/users/:id", usersControllers.edit);
 router.delete("/users/:id", usersControllers.destroy);
 
-router.get("/commentaries", commentariesControllers.browse);
-router.get("/commentaries", commentariesControllers.read);
-router.post("/commentaries", commentariesControllers.add);
+router.get("/comments", commentControllers.browse);
+router.get("/comments", commentControllers.read);
+router.post("/comments", commentControllers.add);
 
 module.exports = router;
