@@ -81,8 +81,8 @@ function Profile() {
       <Card classNames={classes.profile}>
         <div>
           <h1>
-            {`Bienvenue,
-          ${firstname} ${lastname}`}
+            {`Bienvenue
+          ${firstname}`}
           </h1>
         </div>
         <h2>Mes infos</h2>
@@ -157,7 +157,7 @@ function Profile() {
               </div>
             </section>
             <button className={classes["btn-confirm"]} type="submit">
-              Confirmer
+              Modifier
             </button>
           </form>
         </Card>

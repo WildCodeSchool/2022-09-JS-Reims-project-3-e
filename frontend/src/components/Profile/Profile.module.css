@@ -35,6 +35,8 @@
 }
 .profile .btn-modify,
 .profile .btn-confirm {
+  display: flex;
+  justify-content: space-around;
   width: 100px;
   background-color: #a0d24b;
   border: #a0d24b;
@@ -43,10 +45,10 @@
   color: white;
 }
 .profile .btn-modify {
-  margin-left: auto;
+  justify-content: space-around;
 }
 .profile .btn-confirm {
-  margin: auto;
+  justify-content: space-around;
 }
 .profile form {
   padding: 0 100px;
@@ -93,6 +95,7 @@
 
 .modify-section form button {
   display: flex;
+  justify-content: space-around;
   margin: 20px auto;
   width: 100px;
   background-color: #a0d24b;
