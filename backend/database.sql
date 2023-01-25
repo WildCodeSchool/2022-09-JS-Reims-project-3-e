@@ -87,12 +87,13 @@ VALUES
 
 CREATE TABLE comments (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    contentcomment varchar(560) NOT NULL
+    contentcomment varchar(560) NOT NULL,
+    fk_author_id INT NOT NULL,
+    FOREIGN KEY (fk_author_id) REFERENCES users(id )
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
-INSERT INTO comments (id, contentcomment)
+INSERT INTO comments (contentcomment, fk_author_id )
 VALUES
   (
-    1,
-    "Merci pour l'information !"
+    "Merci pour l'information !",'1'
   );
