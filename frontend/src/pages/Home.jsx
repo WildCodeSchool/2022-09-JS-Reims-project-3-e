@@ -1,4 +1,3 @@
-import "../components/NavBar.css";
 import { useEffect, useState } from "react";
 import NewsFeed from "../components/NewsFeed";
 

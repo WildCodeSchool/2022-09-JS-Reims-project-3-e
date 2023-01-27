@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 
-import Like from "./Like";
-
 export default function CommunicationPlanCard({
   title,
   content,
@@ -20,7 +18,6 @@ export default function CommunicationPlanCard({
       <img className="imageurl" src={imageUrl} alt="imageurl" />
       <h1>{title}</h1>
       <p>{content}</p>
-      <Like isFavorite={false} />
     </article>
   );
 }

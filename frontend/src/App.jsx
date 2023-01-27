@@ -1,14 +1,9 @@
 import { useState, useContext } from "react";
 import { Route, Routes } from "react-router-dom";
-import "./components/NavBar.css";
 import Signup from "./components/Signup/Signup";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
-import Menu from "./components/Menu";
-
 import Login from "./components/Login/Login";
 import { UserContext } from "./store/user-context";
-import Profile from "./components/Profile/Profile";
 
 import "./App.css";
 import Main from "./pages/Main";
@@ -37,11 +32,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/profil" element={<Profile />} />
       </Routes>
-
-      <NavBar />
     </>
   );
 
