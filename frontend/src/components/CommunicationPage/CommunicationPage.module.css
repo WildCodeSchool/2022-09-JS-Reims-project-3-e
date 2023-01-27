@@ -79,7 +79,7 @@
   padding: 10px 0;
 }
 
-.article .actions a input {
+.article .actions input {
   width: 100%;
   padding: 5px;
   border: 1px solid gray;
@@ -89,25 +89,25 @@
   padding: 15px;
 }
 
-.article .actions a {
+.article .actions {
   display: flex;
   width: 100%;
   text-decoration: none;
 }
 
-.article .actions a button {
+.article .actions button {
   border: none;
   background-color: transparent;
   border-radius: 50px;
   margin: 0 5px;
 }
-.article .actions a button:active {
+.article .actions button:active {
   border-radius: 50px;
   background-color: rgb(75, 172, 230);
   color: #fff;
 }
 
-.article .actions a button img {
+.article .actions button img {
   width: 30px;
   padding: 5px;
   margin: 0 10px;
