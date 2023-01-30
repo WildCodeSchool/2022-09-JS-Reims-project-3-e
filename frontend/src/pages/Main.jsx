@@ -11,6 +11,7 @@ import classes from "./Main.module.css";
 
 function Main() {
   const [articles, setArticles] = useState([]);
+  const [comments, setComments] = useState([]);
   const { id, firstname, lastname, city } = useContext(UserContext);
 
   const filteredData = articles.map((data) => {
@@ -53,6 +54,7 @@ function Main() {
           firstname,
           lastname,
           city,
+          comments,
         },
       ];
     });
@@ -71,6 +73,23 @@ function Main() {
       );
       const data = await response.json();
       setArticles(data);
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/comments`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await response.json();
+      console.warn(data);
     };
     fetchData();
   }, []);

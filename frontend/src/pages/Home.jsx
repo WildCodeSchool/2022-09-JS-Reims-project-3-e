@@ -6,9 +6,7 @@ function Home() {
 
   useEffect(() => {
     fetch(
-      `${
-        import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000"
-      }/communication-plans`
+      `${import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000"}/comments`
     )
       .then((response) => response.json())
       .then((data) => setArticles(data));
