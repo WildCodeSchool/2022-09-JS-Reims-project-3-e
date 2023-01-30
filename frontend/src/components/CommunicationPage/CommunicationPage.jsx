@@ -1,14 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import CreateComment from "../CreateComment/CreateComment";
 import classes from "./CommunicationPage.module.css";
 import Card from "../../UI/Card";
 import defaultAvatar from "../../assets/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg";
 import like from "../../assets/heart.png";
-import paperPlane from "../../assets/paper-plane.png";
+
 import commentBubble from "../../assets/chat-bubble.png";
 import enedisLogo from "../../assets/enedis-logo.png";
 
 function CommunicationPage({
+  id,
   firstname,
   lastname,
   title,
@@ -16,9 +18,15 @@ function CommunicationPage({
   avatar,
   city,
   image,
+  children,
+  onSubmit,
 }) {
+  const onSave = (comment) => {
+    const articleId = id;
+    onSubmit(comment, articleId);
+  };
   return (
-    <Card classNames={classes.article}>
+    <Card key={id} classNames={classes.article}>
       <div className={classes.header}>
         <div>
           <img
@@ -67,17 +75,16 @@ function CommunicationPage({
           </div>
         </div>
       </div>
-      <div className={classes.actions}>
-        <input type="text" placeholder="Commenter" />
-        <button type="button">
-          <img src={paperPlane} alt="paper-plane" />
-        </button>
-      </div>
+      <section className={classes.social}>
+        <div className={classes["comment-section"]}>{children}</div>
+        <CreateComment onSave={onSave} />
+      </section>
     </Card>
   );
 }
 
 CommunicationPage.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   avatar: PropTypes.string,
@@ -85,6 +92,8 @@ CommunicationPage.propTypes = {
   lastname: PropTypes.string,
   city: PropTypes.string,
   image: PropTypes.string,
+  children: PropTypes.node,
+  onSubmit: PropTypes.func,
 };
 
 CommunicationPage.defaultProps = {
@@ -93,6 +102,8 @@ CommunicationPage.defaultProps = {
   lastname: "",
   city: "Ville",
   image: enedisLogo,
+  children: null,
+  onSubmit: () => {},
 };
 
 export default CommunicationPage;
