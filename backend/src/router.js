@@ -24,7 +24,6 @@ router.put("/users/:id", usersControllers.edit);
 router.delete("/users/:id", usersControllers.destroy);
 
 router.get("/comments", commentControllers.browse);
-router.get("/comments", commentControllers.read);
 router.post("/comments", commentControllers.add);
 
 module.exports = router;
