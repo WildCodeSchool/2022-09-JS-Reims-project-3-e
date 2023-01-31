@@ -6,12 +6,44 @@ import MembersSection from "../components/Members/Members";
 import FirstSteps from "../components/FirstSteps/FirstSteps";
 import Activity from "../components/Activity/Activity";
 import { UserContext } from "../store/user-context";
+import Comments from "../components/Comments/Comments";
 
 import classes from "./Main.module.css";
 
 function Main() {
   const [articles, setArticles] = useState([]);
+
   const { id, firstname, lastname, city } = useContext(UserContext);
+
+  const submitCommentHandler = (comment, articleId) => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/comments/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        comment,
+        author_id: id,
+        communication_plan_id: articleId,
+      }),
+    });
+    setArticles((prevState) => {
+      const { comments } = prevState[articleId - 1];
+      const newComments = [
+        ...comments,
+        {
+          id: Math.random() * 1001212,
+          author: { city, firstname, lastname },
+          comment,
+          author_id: id,
+          communication_plan_id: articleId,
+        },
+      ];
+      const newArticles = [...prevState];
+      newArticles[articleId - 1].comments = newComments;
+      return newArticles;
+    });
+  };
 
   const filteredData = articles.map((data) => {
     return (
@@ -25,7 +57,22 @@ function Main() {
         avatar={data.avatar}
         city={data.city}
         image={data.image}
-      />
+        onSubmit={submitCommentHandler}
+      >
+        {data.comments
+          .map((comment) => {
+            return (
+              <Comments
+                className={classes["comment-section"]}
+                key={comment.id}
+                comment={comment}
+              />
+            );
+          })
+          .filter(
+            (comment) => comment.props.comment.communication_plan_id === data.id
+          )}
+      </CommunicationPage>
     );
   });
   const filteredDataByOrder = filteredData.reverse();
@@ -53,6 +100,7 @@ function Main() {
           firstname,
           lastname,
           city,
+          comments: [],
         },
       ];
     });

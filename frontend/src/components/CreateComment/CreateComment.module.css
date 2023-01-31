@@ -1,0 +1,33 @@
+.actions input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 50px;
+}
+.actions {
+  padding: 15px;
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+}
+
+.actions button {
+  border: none;
+  background-color: transparent;
+  border-radius: 50px;
+  margin: 0 5px;
+}
+.actions button:active {
+  border-radius: 50px;
+  background-color: rgb(75, 172, 230);
+  color: #fff;
+}
+
+.actions button img {
+  width: 30px;
+  padding: 5px;
+  margin: 0 10px;
+}
