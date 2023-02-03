@@ -15,8 +15,8 @@ function Main() {
 
   const { id, firstname, lastname, city } = useContext(UserContext);
 
-  const submitCommentHandler = (comment, articleId) => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/comments/`, {
+  const submitCommentHandler = async (comment, articleId) => {
+    await fetch(`${import.meta.env.VITE_BACKEND_URL}/comments/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,23 +26,28 @@ function Main() {
         author_id: id,
         communication_plan_id: articleId,
       }),
-    });
-    setArticles((prevState) => {
-      const { comments } = prevState[articleId - 1];
-      const newComments = [
-        ...comments,
-        {
-          id: Math.random() * 1001212,
-          author: { city, firstname, lastname },
-          comment,
-          author_id: id,
-          communication_plan_id: articleId,
-        },
-      ];
-      const newArticles = [...prevState];
-      newArticles[articleId - 1].comments = newComments;
-      return newArticles;
-    });
+    })
+      .then((response) => {
+        if (response.ok) {
+          setArticles((prevState) => {
+            const { comments } = prevState[articleId - 1];
+            const newComments = [
+              ...comments,
+              {
+                id: Math.random() * 1001212,
+                author: { city, firstname, lastname },
+                comment,
+                author_id: id,
+                communication_plan_id: articleId,
+              },
+            ];
+            const newArticles = [...prevState];
+            newArticles[articleId - 1].comments = newComments;
+            return newArticles;
+          });
+        }
+      })
+      .catch((error) => console.error(error));
   };
 
   const filteredData = articles.map((data) => {
