@@ -2,7 +2,7 @@ const models = require("../models");
 
 const browse = (req, res) => {
   models.comments
-    .findAll()
+    .getCommentsWithAuthor()
     .then(([rows]) => {
       res.send(rows);
     })

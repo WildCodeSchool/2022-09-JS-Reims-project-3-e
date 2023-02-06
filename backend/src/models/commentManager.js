@@ -7,14 +7,14 @@ class UsersManager extends AbstractManager {
 
   getCommentsWithAuthor() {
     return this.connection.query(
-      `select a.*, u.contentcomment from ${this.table} a join users u on a.fk_author_id = u.id`
+      `select a.*, u.firstname, u.lastname, u.city from ${this.table} a join users u on a.author_id = u.id`
     );
   }
 
   insert(comment) {
     return this.connection.query(
-      `insert into ${this.table} ( contentcomment, fk_author_id ) values (? , ?)`,
-      [comment.contentcomment, comment.fk_author_id]
+      `insert into ${this.table} ( comment, author_id, communication_plan_id) values (? , ?, ?)`,
+      [comment.comment, comment.author_id, comment.communication_plan_id]
     );
   }
 }
