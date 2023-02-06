@@ -4,6 +4,8 @@ import Signup from "./components/Signup/Signup";
 import Header from "./components/Header";
 import Login from "./components/Login/Login";
 import { UserContext } from "./store/user-context";
+import Profile from "./components/Profile/Profile";
+import Menu from "./components/Menu";
 
 import "./App.css";
 import Main from "./pages/Main";
@@ -32,6 +34,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/profil" element={<Profile />} />
       </Routes>
     </>
   );

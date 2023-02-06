@@ -12,6 +12,7 @@ import classes from "./Main.module.css";
 function Main() {
   const [articles, setArticles] = useState([]);
   const [comments, setComments] = useState([]);
+
   const { id, firstname, lastname, city } = useContext(UserContext);
 
   const filteredData = articles.map((data) => {
@@ -29,6 +30,7 @@ function Main() {
       />
     );
   });
+
   const filteredDataByOrder = filteredData.reverse();
 
   const submitHandler = (title, content) => {
@@ -54,7 +56,6 @@ function Main() {
           firstname,
           lastname,
           city,
-          comments,
         },
       ];
     });
