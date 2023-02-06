@@ -7,6 +7,7 @@ import { UserContext } from "./store/user-context";
 
 import "./App.css";
 import Main from "./pages/Main";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   const { token } = useContext(UserContext);
@@ -32,6 +33,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );
