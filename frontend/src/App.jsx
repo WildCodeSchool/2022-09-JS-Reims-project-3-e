@@ -9,6 +9,7 @@ import Menu from "./components/Menu";
 
 import "./App.css";
 import Main from "./pages/Main";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   const { token } = useContext(UserContext);
@@ -35,7 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/profil" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );

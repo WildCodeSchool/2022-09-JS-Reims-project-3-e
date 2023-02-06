@@ -1,8 +1,6 @@
 .main-container {
   margin: 30px;
   display: flex;
-  justify-content: center;
-  box-sizing: border-box;
 }
 
 .main-container .col-1,
@@ -11,4 +9,13 @@
 }
 .main-container .col-2 {
   flex: 1 1 auto;
+}
+
+@media (max-width: 900px) {
+  .main-container .col-3 {
+    display: none;
+  }
+  .main-container .col-1 {
+    flex: 1 1 auto;
+  }
 }
