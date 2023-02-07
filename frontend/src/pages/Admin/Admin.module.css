@@ -1,0 +1,13 @@
+.admin-panel {
+  margin: 30px;
+}
+.admin-panel .fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr;
+  gap: 5px;
+  border: 1px solid black;
+}
+
+.admin-panel .fields h3:nth-child(even) {
+  background-color: lightgray;
+}

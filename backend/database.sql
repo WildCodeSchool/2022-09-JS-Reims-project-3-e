@@ -47,7 +47,7 @@ VALUES
     "Bakaev",
     "adnan13",
     "Reims",
-    "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"
+    "$argon2i$v=19$m=16,t=2,p=1$RWJ0ZFRGUkZGSWpqcjNiRA$0obQ10g+qgCx0VDKNqILfg"
   ), 
   (
     true,

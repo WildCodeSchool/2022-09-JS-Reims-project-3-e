@@ -8,9 +8,11 @@ import { UserContext } from "./store/user-context";
 import "./App.css";
 import Main from "./pages/Main";
 import Profile from "./components/Profile/Profile";
+import Admin from "./pages/Admin/Admin";
 
 function App() {
   const { token } = useContext(UserContext);
+  const { admin } = useContext(UserContext);
 
   const [isActive, setIsActive] = useState(false);
   const switchPage = () => {
@@ -34,6 +36,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/profile" element={<Profile />} />
+        {admin ? <Route path="/admin" element={<Admin />} /> : null}
+        <Route path="*" element={<Main />} />
       </Routes>
     </>
   );
