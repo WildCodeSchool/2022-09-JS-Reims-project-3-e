@@ -1,0 +1,27 @@
+button {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-size: 100%;
+  padding: 0;
+}
+.isFavorite {
+  background-color: white;
+  border: none;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg");
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  align-self: flex-start;
+  margin: 0.5rem 0rem 0rem 0rem;
+}
+.notFavorite {
+  background-color: white;
+  border: none;
+  max-height: 24px;
+  max-width: 24px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
+  background-size: 100%;
+  align-self: flex-start;
+  margin: 0.5rem 0rem 0rem 0rem;
+}

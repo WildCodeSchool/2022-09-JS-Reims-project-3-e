@@ -4,7 +4,7 @@ import CreateComment from "../CreateComment/CreateComment";
 import classes from "./CommunicationPage.module.css";
 import Card from "../../UI/Card";
 import defaultAvatar from "../../assets/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg";
-import like from "../../assets/heart.png";
+import Like from "../Like";
 
 import commentBubble from "../../assets/chat-bubble.png";
 import enedisLogo from "../../assets/enedis-logo.png";
@@ -60,18 +60,12 @@ function CommunicationPage({
         />
         <div className={classes.interaction}>
           <div>
-            <p>0</p>
-            <img src={like} alt="like" />
-          </div>
-          <div>
-            <p>0</p>
             <img src={commentBubble} alt="comment-bubble" />
+            <p className="commentcount">0</p>
           </div>
           <div>
-            <button type="button">
-              <img src={like} alt="like" />
-              J'aime
-            </button>
+            <Like />
+            J'aime
           </div>
         </div>
       </div>
