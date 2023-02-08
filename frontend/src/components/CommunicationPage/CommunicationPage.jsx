@@ -5,7 +5,6 @@ import classes from "./CommunicationPage.module.css";
 import Card from "../../UI/Card";
 import defaultAvatar from "../../assets/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg";
 import Like from "../Like";
-
 import commentBubble from "../../assets/chat-bubble.png";
 import enedisLogo from "../../assets/enedis-logo.png";
 

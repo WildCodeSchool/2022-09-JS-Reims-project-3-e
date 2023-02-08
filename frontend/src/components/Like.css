@@ -1,7 +1,14 @@
-button {
+button.isFavorite {
   width: 24px;
   height: 24px;
-  margin: 0;
+  margin: 0.5rem 0rem 0rem 0rem;
+  background-size: 100%;
+  padding: 0;
+}
+button.notFavorite {
+  width: 24px;
+  height: 24px;
+  margin: 0.5rem 0rem 0rem 0rem;
   background-size: 100%;
   padding: 0;
 }
@@ -13,7 +20,6 @@ button {
   height: 24px;
   background-size: 100%;
   align-self: flex-start;
-  margin: 0.5rem 0rem 0rem 0rem;
 }
 .notFavorite {
   background-color: white;
@@ -23,5 +29,4 @@ button {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
   background-size: 100%;
   align-self: flex-start;
-  margin: 0.5rem 0rem 0rem 0rem;
 }
