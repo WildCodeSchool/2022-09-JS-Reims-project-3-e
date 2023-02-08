@@ -95,9 +95,4 @@
 }
 .article .comment-section {
   max-height: 130px;
-  overflow: scroll;
-}
-.article .social {
-  border: 1px solid black;
-  border-radius: 5px;
 }
