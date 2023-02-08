@@ -77,7 +77,7 @@ function CommunicationPage({
 }
 
 CommunicationPage.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   avatar: PropTypes.string,
