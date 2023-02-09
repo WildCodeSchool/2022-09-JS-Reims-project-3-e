@@ -24,7 +24,7 @@ function App() {
     <div className="log-page">
       <Login />
       <button onClick={switchPage} type="button">
-        Premiere fois? Creet votre compte!
+        Premiere fois? Créez votre compte!
       </button>
     </div>
   );
